@@ -1,24 +1,33 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 
 @Component({
     selector: "app-side-menu",
     templateUrl: "./side-menu.component.html",
-    styleUrls: ["./side-menu.component.less"]
+    styleUrls: ["./side-menu.component.less"],
+    encapsulation: ViewEncapsulation.None
 })
 export class SideMenuComponent implements OnInit {
 
     public links: Link[] = [
         {
-            name: "First",
-            icon: "icon",
+            name: "Home",
+            icon: "#houseIcon",
         },
         {
-            name: "Second",
-            icon: "icon",
+            name: "Projects",
+            icon: "#rocketIcon",
         },
         {
-            name: "Third",
-            icon: "icon",
+            name: "In Development",
+            icon: "#alienIcon",
+        },
+        {
+            name: "About Me",
+            icon: "#professionalIcon",
+        },
+        {
+            name: "Dark Mode",
+            icon: "#moonIcon",
         },
     ];
 
