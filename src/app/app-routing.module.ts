@@ -1,10 +1,17 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
+import { ProjectsComponent } from "./projects/projects.component";
 
 
 const routes: Routes = [
-    { path: "", component: HomeComponent }
+    { path: "home", component: HomeComponent },
+    { path: "projects", component: ProjectsComponent },
+    { path: "projects/:dev", component: ProjectsComponent },
+
+    // Redirects
+    { path: "", redirectTo: "home", pathMatch: "full" },
+    { path: "**", redirectTo: "home", pathMatch: "full" }, // TODO: Implement 404 screen
 ];
 
 @NgModule({
