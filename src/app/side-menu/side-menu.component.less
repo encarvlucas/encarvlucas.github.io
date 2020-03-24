@@ -36,7 +36,6 @@
 
 .nav-link {
     display: flex;
-    outline: none;
     align-items: center;
     height: var(--navbar-size);
     color: var(--theme-main-color);
@@ -51,11 +50,11 @@
     }
 
     span {
-        margin-right: 1.5rem;
+        margin-right: 0;
         color: var(--theme-secondary-color);
         opacity: 0;
         font-weight: 600;
-        font-size: 1.2rem;
+        font-size: 0;
     }
 
     &:hover {
@@ -106,27 +105,29 @@
         &:hover {
             max-width: calc(var(--navbar-size) * 4);
             width: auto;
-            transition: max-width var(--transition-speed) ease-in;
+            transition: all var(--transition-speed) ease-in;
 
             .logo {
                 svg {
                     transform: rotateY(180deg);
                     opacity: 0;
                     display: none;
-                    transition: opacity var(--transition-speed) ease-in;
+                    transition: all var(--transition-speed) ease-in;
                 }
 
                 h1 {
                     display: block;
                     opacity: 1;
-                    transition: opacity var(--transition-speed) ease-in;
+                    transition: all var(--transition-speed) ease-in;
                     animation: type calc(var(--transition-speed) * 1.5) steps(60, end);
                 }
             }
 
             .nav-title {
+                font-size: 1.2rem;
+                margin-right: 1.5rem;
                 opacity: 1;
-                transition: opacity var(--transition-speed) ease-in;
+                transition: all var(--transition-speed) ease-in;
             }
         }
     }
