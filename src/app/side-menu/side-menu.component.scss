@@ -113,6 +113,10 @@ $transition-speed: 300ms;
             transition: all $transition-speed ease-in;
 
             .logo {
+                .nav-link {
+                    background-color: initial;
+                }
+
                 svg {
                     transform: rotateY(180deg);
                     opacity: 0;
