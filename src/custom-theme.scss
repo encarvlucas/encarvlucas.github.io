@@ -1,0 +1,48 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$encarvlucas-site-primary: mat-palette($mat-blue, 500, 900, 300);
+$encarvlucas-site-accent: mat-palette($mat-deep-purple, 600, 800, A200);
+
+// The warn palette is optional (defaults to red).
+$encarvlucas-site-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$encarvlucas-site-theme: mat-light-theme($encarvlucas-site-primary, $encarvlucas-site-accent, $encarvlucas-site-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($encarvlucas-site-theme);
+
+// Extract the palettes you need from the theme definition.
+$primary: mat-color(map-get($encarvlucas-site-theme, primary));
+// $primary-lighter: mat-color(map-get($encarvlucas-site-theme, primary));
+$accent: mat-color(map-get($encarvlucas-site-theme, accent));
+$warn: mat-color(map-get($encarvlucas-site-theme, warn));
+$background: #393E46;
+$background-alt: darken($background, 2);
+$font: #EEEEEE;
+
+// Dark theme settings
+@media (prefers-color-scheme: dark) { // TODO: Dark/Light mode differences
+    :root {
+        // $primary: mat-color(map-get($encarvlucas-site-theme, primary));
+        // $primary-lighter: mat-color(map-get($encarvlucas-site-theme, primary), "ligther");
+        // $accent: mat-color(map-get($encarvlucas-site-theme, accent));
+        // $warn: mat-color(map-get($encarvlucas-site-theme, warn));
+        // $background: #393E46;
+        // $font: #EEEEEE;
+    }
+}

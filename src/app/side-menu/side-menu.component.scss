@@ -1,10 +1,10 @@
-* {
-    --navbar-size: 5rem;
-    --transition-speed: 300ms;
-}
+@import "../../custom-theme.scss";
+
+$navbar-size: 5rem;
+$transition-speed: 300ms;
 
 .content-box {
-    margin-left: var(--navbar-size);
+    margin-left: $navbar-size;
 
     .content {
         height: calc(100% - 2rem);
@@ -15,8 +15,8 @@
 
 .navbar {
     position: fixed;
-    background-color: var(--theme-main-color);
-    transition: width var(--transition-speed) ease-in-out;
+    background-color: $background-alt;
+    transition: width $transition-speed ease-in-out;
 }
 
 .navbar-nav {
@@ -37,54 +37,54 @@
 .nav-link {
     display: flex;
     align-items: center;
-    height: var(--navbar-size);
-    color: var(--theme-main-color);
+    height: $navbar-size;
+    color: $primary;
     filter: grayscale(100%) opacity(0.6);
-    transition: var(--transition-speed);
+    transition: $transition-speed;
 
     svg {
         min-width: 2rem;
-        max-width: calc(var(--navbar-size) - 3rem);
-        max-height: calc(var(--navbar-size) - 3rem);
+        max-width: calc(#{$navbar-size} - 3rem);
+        max-height: calc(#{$navbar-size} - 3rem);
         margin: 0 1.5rem;
     }
 
     span {
         margin-right: 0;
-        color: var(--theme-secondary-color);
+        color: $primary;
         opacity: 0;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 0;
     }
 
     &:hover {
         filter: grayscale(0%) opacity(1) brightness(125%);
-        background-color: var(--theme-background-color);
+        background-color: $background;
     }
 }
 
 .logo {
     width: 100%;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     margin-bottom: 1rem;
     text-align: center;
-    background-color: var(--theme-background-color);
-    filter: brightness(80%);
+    background-color: darken($background, 5);
 
     .nav-link {
         filter: opacity(1);
     }
 
     svg {
-        color: var(--theme-terciary-color);
+        color: $accent;
         transform: rotateY(0deg);
     }
 
     h1 {
         margin: 0 1.5rem;
-        color: var(--theme-font-color);
+        color: $font;
         display: none;
+        font-weight: 600;
     }
 }
 
@@ -99,27 +99,32 @@
 @media only screen and (min-width: 600px) {
     .navbar {
         top: 0;
-        max-width: var(--navbar-size);
+        max-width: $navbar-size;
         height: 100vh;
 
+        .navbar-nav {
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
         &:hover {
-            max-width: calc(var(--navbar-size) * 4);
+            max-width: $navbar-size * 4;
             width: auto;
-            transition: all var(--transition-speed) ease-in;
+            transition: all $transition-speed ease-in;
 
             .logo {
                 svg {
                     transform: rotateY(180deg);
                     opacity: 0;
                     display: none;
-                    transition: all var(--transition-speed) ease-in;
+                    transition: all $transition-speed ease-in;
                 }
 
                 h1 {
                     display: block;
                     opacity: 1;
-                    transition: all var(--transition-speed) ease-in;
-                    animation: type calc(var(--transition-speed) * 1.5) steps(60, end);
+                    transition: all $transition-speed ease-in;
+                    animation: type ($transition-speed * 1.5) steps(60, end);
                 }
             }
 
@@ -127,7 +132,7 @@
                 font-size: 1.2rem;
                 margin-right: 1.5rem;
                 opacity: 1;
-                transition: all var(--transition-speed) ease-in;
+                transition: all $transition-speed ease-in;
             }
         }
     }
@@ -141,7 +146,7 @@
 @media only screen and (max-width: 600px) {
     .content-box {
         margin-left: 0;
-        height: calc(100vh - var(--navbar-size));
+        height: calc(100vh - #{$navbar-size});
     }
 
     .logo {
@@ -151,11 +156,13 @@
     .navbar {
         bottom: 0;
         width: 100vw;
-        height: var(--navbar-size);
+        height: $navbar-size;
         overflow-x: auto;
     }
 
     .navbar-nav {
+        overflow-x: auto;
+        overflow-y: hidden;
         flex-direction: row;
     }
 
@@ -174,5 +181,5 @@
 }
 
 svg {
-    color: var(--theme-secondary-color);
+    color: $primary;
 }

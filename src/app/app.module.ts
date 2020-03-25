@@ -7,6 +7,7 @@ import { SideMenuComponent } from "./side-menu/side-menu.component";
 import { HomeComponent } from "./home/home.component";
 import { CardsComponent } from "./cards/cards.component";
 import { ProjectsComponent } from "./projects/projects.component";
+import { MatButtonModule } from "@angular/material/button";
 
 @NgModule({
     declarations: [
@@ -18,7 +19,8 @@ import { ProjectsComponent } from "./projects/projects.component";
     ],
     imports: [
         BrowserModule,
-        AppRoutingModule
+        AppRoutingModule,
+        MatButtonModule,
     ],
     providers: [],
     bootstrap: [AppComponent]
