@@ -9,7 +9,9 @@ import { ActivatedRoute } from "@angular/router";
 export class ProjectsComponent implements OnInit {
     public dev: boolean;
 
-    constructor(private router: ActivatedRoute) { }
+    constructor(
+        private router: ActivatedRoute
+    ) { }
 
     ngOnInit(): void {
         this.router.params.subscribe(

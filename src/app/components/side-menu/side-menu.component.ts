@@ -35,7 +35,7 @@ export class SideMenuComponent implements OnInit {
         {
             name: "Dark Mode",
             icon: "moonIcon",
-            route: "/", // TODO: Dark mode functionality
+            route: "/dark", // TODO: Dark mode functionality
         },
     ];
 

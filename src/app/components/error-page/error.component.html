@@ -1,0 +1,20 @@
+<body>
+    <h1>
+        <mat-icon color="{{ inConstruction ? 'primary' : 'warn'}}">
+            {{ inConstruction ? "build" : "error_outline" }}
+        </mat-icon>
+        {{
+            inConstruction ?
+            "Page in construction" :
+            "Page not found!"
+        }}
+    </h1>
+
+    <h2>
+        {{
+            inConstruction ?
+            "Sorry, this page has not been created yet, please come back later and hopefully it will be done!" :
+            "Sorry, it seems the page you were looking for doesn't exist!"
+        }}
+    </h2>
+</body>

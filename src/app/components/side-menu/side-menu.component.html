@@ -9,7 +9,8 @@
         </li>
 
         <li class="nav-item" *ngFor="let link of links">
-            <div [routerLink]="link.route" class="nav-link">
+            <div [routerLink]="link.route" class="nav-link"
+                [matTooltip]="link.name" matTooltipClass="side-bar-tooltip">
                 <mat-icon [svgIcon]="link.icon"></mat-icon>
                 <span class="nav-title">{{ link.name }}</span>
             </div>

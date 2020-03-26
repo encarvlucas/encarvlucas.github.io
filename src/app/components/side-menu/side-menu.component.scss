@@ -154,6 +154,10 @@ $transition-speed: 300ms;
     .nav-item:last-child {
         margin-top: auto;
     }
+
+    .side-bar-tooltip {
+        display: none;
+    }
 }
 
 /* Smaller screens */
