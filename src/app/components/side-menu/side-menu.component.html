@@ -1,0 +1,24 @@
+<nav class="navbar">
+    <ul class="navbar-nav">
+        <li class="logo-section">
+            <div class="nav-link">
+                <h1 class="nav-title">Encarvlucas</h1>
+                <mat-icon svgIcon="showMoreIcon" class="show-more"></mat-icon>
+                <mat-icon svgIcon="dragonIcon" class="logo"></mat-icon>
+            </div>
+        </li>
+
+        <li class="nav-item" *ngFor="let link of links">
+            <div [routerLink]="link.route" class="nav-link">
+                <mat-icon [svgIcon]="link.icon"></mat-icon>
+                <span class="nav-title">{{ link.name }}</span>
+            </div>
+        </li>
+    </ul>    
+</nav>
+
+<div class="content-box">
+    <div class="content">
+        <ng-content></ng-content>
+    </div>
+</div>

@@ -1,4 +1,4 @@
-@import "../../custom-theme.scss";
+@import "../../../custom-theme.scss";
 
 $navbar-size: 5rem;
 $transition-speed: 300ms;
@@ -63,7 +63,7 @@ $transition-speed: 300ms;
     }
 }
 
-.logo {
+.logo-section {
     width: 100%;
     font-weight: 500;
     text-transform: uppercase;
@@ -78,6 +78,11 @@ $transition-speed: 300ms;
     svg {
         color: $accent;
         transform: rotateY(0deg);
+    }
+
+    .logo svg {
+        color: $warn;
+        opacity: 0;
     }
 
     h1 {
@@ -112,16 +117,21 @@ $transition-speed: 300ms;
             width: auto;
             transition: all $transition-speed ease-in;
 
-            .logo {
+            .logo-section {
                 .nav-link {
                     background-color: initial;
                 }
 
-                svg {
-                    transform: rotateY(180deg);
+                .show-more svg {
                     opacity: 0;
                     display: none;
                     transition: all $transition-speed ease-in;
+                }
+
+                .logo svg {
+                    transform: rotateY(180deg);
+                    opacity: 1;
+                    transition: all $transition-speed * 2 ease-in;
                 }
 
                 h1 {
@@ -153,7 +163,7 @@ $transition-speed: 300ms;
         height: calc(100vh - #{$navbar-size});
     }
 
-    .logo {
+    .logo-section {
         display: none;
     }
 
@@ -182,6 +192,11 @@ $transition-speed: 300ms;
             display: none;
         }
     }
+}
+
+mat-icon {
+    height: auto !important;
+    width: auto !important;
 }
 
 svg {

@@ -2,12 +2,15 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 
 import { AppRoutingModule } from "./app-routing.module";
-import { AppComponent } from "./app.component";
-import { SideMenuComponent } from "./side-menu/side-menu.component";
-import { HomeComponent } from "./home/home.component";
-import { CardsComponent } from "./cards/cards.component";
-import { ProjectsComponent } from "./projects/projects.component";
 import { MatButtonModule } from "@angular/material/button";
+import { MatIconModule } from "@angular/material/icon";
+import { HttpClientModule } from "@angular/common/http";
+
+import { AppComponent } from "./components/app.component";
+import { SideMenuComponent } from "./components/side-menu/side-menu.component";
+import { HomeComponent } from "./components/home/home.component";
+import { CardsComponent } from "./components/cards/cards.component";
+import { ProjectsComponent } from "./components/projects/projects.component";
 
 @NgModule({
     declarations: [
@@ -21,6 +24,8 @@ import { MatButtonModule } from "@angular/material/button";
         BrowserModule,
         AppRoutingModule,
         MatButtonModule,
+        MatIconModule,
+        HttpClientModule,
     ],
     providers: [],
     bootstrap: [AppComponent]
