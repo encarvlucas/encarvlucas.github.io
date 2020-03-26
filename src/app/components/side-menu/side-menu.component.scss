@@ -16,6 +16,7 @@ $transition-speed: 300ms;
 .navbar {
     position: fixed;
     background-color: $background-alt;
+    z-index: 10;
     transition: width $transition-speed ease-in-out;
 }
 
