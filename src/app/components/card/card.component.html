@@ -1,0 +1,14 @@
+<div class="container" [style]="'height: ' + this.height + 'px; width: ' + this.width + 'px;'">
+    <div class="overlay">
+        <div class="items date">
+            {{ creationDate?.toDateString() }}
+        </div>
+        <div class="items title">
+            <p>{{ title }}</p>
+            <hr>
+        </div>
+        <div class="items desc">
+            <p>{{ description }}</p>
+        </div>
+    </div>
+</div>

@@ -12,8 +12,9 @@ import { AppComponent } from "./components/app.component";
 import { SideMenuComponent } from "./components/side-menu/side-menu.component";
 import { HomeComponent } from "./components/home/home.component";
 import { ErrorComponent } from "./components/error-page/error.component";
-import { CardsComponent } from "./components/cards/cards.component";
+import { CardComponent } from "./components/card/card.component";
 import { ProjectsComponent } from "./components/projects/projects.component";
+import { DarkModeComponent } from "./components/dark-mode/dark.component";
 
 @NgModule({
     declarations: [
@@ -21,8 +22,9 @@ import { ProjectsComponent } from "./components/projects/projects.component";
         SideMenuComponent,
         HomeComponent,
         ErrorComponent,
-        CardsComponent,
+        CardComponent,
         ProjectsComponent,
+        DarkModeComponent,
     ],
     imports: [
         BrowserModule,

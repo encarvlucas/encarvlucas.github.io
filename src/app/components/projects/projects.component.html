@@ -1,6 +1,8 @@
 <h1>Test</h1>
 <h2>This is {{ !dev ? "Projects" : "In Development" }} </h2>
-<button mat-raised-button color="primary" matTooltip="Test to see if it still works">
-    Test
-</button>
-<app-cards></app-cards>
+<app-card class="card" height="400" width="300"
+    *ngFor="let project of projects"
+    [title]="project.name"
+    [description]="project.description"
+    [creationDate]="project.lastUpdated">
+</app-card>

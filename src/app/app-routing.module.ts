@@ -3,6 +3,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./components/home/home.component";
 import { ProjectsComponent } from "./components/projects/projects.component";
 import { ErrorComponent } from "./components/error-page/error.component";
+import { DarkModeComponent } from "./components/dark-mode/dark.component";
 
 
 const routes: Routes = [
@@ -11,7 +12,7 @@ const routes: Routes = [
     { path: "projects", component: ProjectsComponent },
     { path: "projects/:dev", component: ProjectsComponent },
     { path: "about", component: ErrorComponent },
-    { path: "dark", component: ErrorComponent },
+    { path: "dark", component: DarkModeComponent },
 
     // Redirects
     { path: "", redirectTo: "home", pathMatch: "full" },
