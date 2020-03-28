@@ -10,7 +10,7 @@ const routes: Routes = [
     { path: "home", component: HomeComponent },
     { path: "error", component: ErrorComponent },
     { path: "projects", component: ProjectsComponent },
-    { path: "projects/:dev", component: ProjectsComponent },
+    { path: "dev", component: ProjectsComponent },
     { path: "about", component: ErrorComponent },
     { path: "dark", component: DarkModeComponent },
 

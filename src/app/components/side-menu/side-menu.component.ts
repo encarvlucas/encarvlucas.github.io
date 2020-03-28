@@ -25,7 +25,7 @@ export class SideMenuComponent implements OnInit {
         {
             name: "In Development",
             icon: "biohazardIcon",
-            route: "/projects/dev",
+            route: "/dev",
         },
         {
             name: "About Me",
