@@ -10,6 +10,7 @@ export class CardComponent implements OnInit {
     @Input() public width = 150; // In pixels
     @Input() public title = "Title"; // Card title
     @Input() public description = "Description"; // Card description
+    @Input() public route = "/error"; // Card description
     @Input() public creationDate: Date; // Card date
 
     constructor() { }

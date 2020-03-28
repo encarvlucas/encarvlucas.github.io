@@ -15,6 +15,7 @@ import { ErrorComponent } from "./components/error-page/error.component";
 import { CardComponent } from "./components/card/card.component";
 import { ProjectsComponent } from "./components/projects/projects.component";
 import { DarkModeComponent } from "./components/dark-mode/dark.component";
+import { GuessingComponent } from "./components/guessing/guessing.component";
 
 @NgModule({
     declarations: [
@@ -25,6 +26,7 @@ import { DarkModeComponent } from "./components/dark-mode/dark.component";
         CardComponent,
         ProjectsComponent,
         DarkModeComponent,
+        GuessingComponent,
     ],
     imports: [
         BrowserModule,

@@ -1,5 +1,5 @@
 <div class="container" [style]="'height: ' + this.height + 'px; width: ' + this.width + 'px;'">
-    <div class="overlay">
+    <div class="overlay" [routerLink]="route">
         <div class="items date">
             {{ creationDate?.toDateString() }}
         </div>

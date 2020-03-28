@@ -4,5 +4,6 @@
     *ngFor="let project of projects"
     [title]="project.name"
     [description]="project.description"
+    [route]="project.route"
     [creationDate]="project.lastUpdated">
 </app-card>
