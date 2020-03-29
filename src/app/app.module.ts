@@ -2,6 +2,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { LocationStrategy, PathLocationStrategy } from "@angular/common";
 import { NgModule } from "@angular/core";
+import * as importPrototypes from "./custom-prototypes";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { FormsModule } from "@angular/forms";
@@ -56,3 +57,6 @@ import { SchedulerComponent } from "./components/scheduler/scheduler.component";
     bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+// tslint:disable-next-line: no-unused-expression
+importPrototypes;

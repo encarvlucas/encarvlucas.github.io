@@ -1,5 +1,6 @@
 export interface Guess {
-    name: string;
+    id: string;
     emoji: string;
+    answers: string[];
     type?: string;
 }
