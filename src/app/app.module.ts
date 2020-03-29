@@ -1,6 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { LocationStrategy, PathLocationStrategy, APP_BASE_HREF } from "@angular/common";
+import { LocationStrategy, PathLocationStrategy } from "@angular/common";
 import { NgModule } from "@angular/core";
 
 import { AppRoutingModule } from "./app-routing.module";
@@ -48,7 +48,6 @@ import { SchedulerComponent } from "./components/scheduler/scheduler.component";
     ],
     providers: [
         { provide: LocationStrategy, useClass: PathLocationStrategy },
-        { provide: APP_BASE_HREF, useValue: "/docs" },
     ],
     bootstrap: [AppComponent]
 })
