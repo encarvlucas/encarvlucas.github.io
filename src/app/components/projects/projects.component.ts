@@ -30,10 +30,8 @@ export class ProjectsComponent implements OnInit {
                 {
                     name: "Group Scheduler",
                     description: `Trying to arrange the best time and date for a group meeting but have trouble
-                    getting everyone's best availabe date?
-
-                    Try my group scheduler!`,
-                    route: "/emoji",
+getting everyone's best availabe date?\nTry my group scheduler!`,
+                    route: "/scheduler",
                     imageLink: "/pathToImage",
                     lastUpdated: new Date("2018-12-04T21:05:12"),
                 },

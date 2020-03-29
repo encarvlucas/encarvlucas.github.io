@@ -1,1 +1,14 @@
-<iframe class="frame-content" src="https://lcs-group-scheduler.firebaseapp.com"></iframe>
+<div class="container">
+    <h1>Adivinhe o filme!</h1>
+    <h2>{{ guess.emoji }}</h2>
+    <h4>{{ points + " pontos" }}</h4>
+    <h4>{{ "recorde: " + highscore }}</h4>
+    <mat-form-field>
+        <mat-label class="label">This is just a test</mat-label>
+        <input matInput placeholder="none" type="text"
+            [(ngModel)]="answer"
+            (keydown.enter)="submit(answer, guess)">
+    </mat-form-field>
+    <button mat-raised-button (click)="submit(answer, guess)" color="primary">Confirmar</button>
+    <mat-icon *ngFor="let heart of lives" color="warn">favorite</mat-icon>
+</div>

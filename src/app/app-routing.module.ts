@@ -5,6 +5,7 @@ import { ProjectsComponent } from "./components/projects/projects.component";
 import { ErrorComponent } from "./components/error-page/error.component";
 import { DarkModeComponent } from "./components/dark-mode/dark.component";
 import { GuessingComponent } from "./components/guessing/guessing.component";
+import { SchedulerComponent } from "./components/scheduler/scheduler.component";
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
 
     // Projects
     { path: "emoji", component: GuessingComponent },
+    { path: "scheduler", component: SchedulerComponent },
 
     // Redirects
     { path: "", redirectTo: "home", pathMatch: "full" },

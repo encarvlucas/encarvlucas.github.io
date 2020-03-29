@@ -212,3 +212,15 @@ mat-icon {
 svg {
     color: $primary;
 }
+
+.snack-bar{
+    white-space: pre-wrap;
+
+    button {
+       color: $primary;
+    }
+
+    &.warn button {
+        color: $warn;
+    }
+}
