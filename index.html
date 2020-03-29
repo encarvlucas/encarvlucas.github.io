@@ -1,7 +1,15 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <meta http-equiv="refresh" content="0; url=https://encarvlucas-site.firebaseapp.com" />
+        <meta id="redirect" http-equiv="refresh" content="0; url=https://encarvlucas-site.firebaseapp.com" />
     </head>
-    <body></body>
+    <body>
+
+    <!-- Redirect in JavaScript with meta refresh fallback above in noscript -->
+    <script>
+        debugger;
+        var redirect = document.getElementById("redirect");
+        redirect.content += "/" + window.location.search;
+    </script>
+    </body>
 </html>
