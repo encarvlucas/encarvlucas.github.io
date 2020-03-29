@@ -1,9 +1,10 @@
 import { Component, OnInit } from "@angular/core";
 import movieData from "./movies.json";
-import { Guess } from "./guess.model";
-import { GameState } from "./game-state.model";
+import { Guess } from "../../models/guess.model";
+import { GameState } from "../../models/game-state.model";
 import { MatSnackBar, MatSnackBarRef, SimpleSnackBar } from "@angular/material/snack-bar";
-import { StringComparePipe } from 'src/app/pipes/string-compare.pipe';
+import { StringComparePipe } from "src/app/pipes/string-compare.pipe";
+import {  } from "./../../custom-prototypes";
 
 @Component({
     selector: "app-guessing",
@@ -14,8 +15,9 @@ export class GuessingComponent implements OnInit {
 
     private totalLives = 3;
     public lives: boolean[];
-    private currentIndex: number;
+    public guess: Guess;
     public answer: string;
+    public history: string[];
     public streak: boolean;
     public points: number;
     public highscore: number;
@@ -28,30 +30,23 @@ export class GuessingComponent implements OnInit {
 
     ngOnInit(): void {
         // Initialize game state
-        this.lives = Array(this.totalLives).fill(true);
-        this.points = 0;
-        this.highscore = 0;
-        this.streak = true;
-        this.loadState();
-
-        // Shuffle list
         this.movies = movieData;
-        // TODO: Shuffling...
-        this.currentIndex = 0;
+        this.resetGame();
+        this.loadState();
     }
 
-    public get guess(): Guess {
-        return this.movies[this.currentIndex];
+    private get remaining(): Guess[] {
+        return this.movies.filter(guess => !this.history.includes(guess.id));
     }
 
     public submit(attempt: string, guess: Guess): void {
-        if (this.compare.transform(attempt, guess.name)) {
+        if (this.compare.transform(attempt, guess)) {
             this.points++;
             this.nextGuess();
         } else {
             this.lives.pop();
             if (this.lives.length === 0) {
-                this.alertUser(`Acabaram suas chances!\nA resposta era \"${guess.name}\"`,
+                this.alertUser(`Acabaram suas chances!\nA resposta era \"${guess.answers.last()}\"`,
                     5000, true);
                 this.nextGuess();
             } else {
@@ -61,7 +56,7 @@ export class GuessingComponent implements OnInit {
         this.saveState(
             {
                 points: this.points,
-                currentIndex: this.currentIndex,
+                history: this.history,
                 highscore: this.highscore,
                 lives: this.lives,
                 streak: this.streak,
@@ -69,11 +64,18 @@ export class GuessingComponent implements OnInit {
         );
     }
 
-    // TODO: Change next guess function to randomly choose next guess and treat no more guesses
+    private randomize(): number {
+        const maxNum = this.remaining.length;
+        return Math.floor(Math.random() * Math.floor(maxNum));
+    }
+
     private nextGuess(): void {
         this.lives = Array(this.totalLives).fill(true);
         this.answer = "";
-        this.currentIndex++;
+        if (this.guess) {
+            this.history.push(this.guess.id);
+        }
+        this.guess = this.remaining[this.randomize()];
     }
 
     private alertUser(message: string, duration: number = 2000, top: boolean = false): MatSnackBarRef<SimpleSnackBar> {
@@ -83,6 +85,16 @@ export class GuessingComponent implements OnInit {
             horizontalPosition: "right",
             panelClass: ["snack-bar", "warn"]
         });
+    }
+
+    public resetGame(): void {
+        this.lives = Array(this.totalLives).fill(true);
+        this.history = [];
+        this.points = 0;
+        this.highscore = 0;
+        this.streak = true;
+
+        this.nextGuess();
     }
 
     // TODO: Add comeback logic

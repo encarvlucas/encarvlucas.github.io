@@ -1,46 +1,89 @@
 [
     {
-        "name": "Rei Leão",
-        "emoji": "🦁👑"
+        "id": "lion_king",
+        "emoji": "🦁👑",
+        "answers": [
+            "Lion King",
+            "Rei Leão"
+        ]
     },
     {
-        "name": "As Aventuras de Pi",
-        "emoji": "⛵🐯"
+        "id": "life_of_pi",
+        "emoji": "⛵🐯",
+        "answers": [
+            "Life of Pi",
+            "As Aventuras de Pi"
+        ]
     },
     {
-        "name": "A Dama e o Vagabundo",
-        "emoji": "🐕🍝🐩"
+        "id": "lady_tramp",
+        "emoji": "🐕🍝🐩",
+        "answers": [
+            "Lady and the Tramp",
+            "A Dama e o Vagabundo"
+        ]
     },
     {
-        "name": "Edward Mãos de Tesoura",
-        "emoji": "✂🖐😩🖐✂"
+        "id": "edward_scissorhands",
+        "emoji": "✂🖐😩🖐✂",
+        "answers": [
+            "Edward Scissorhands",
+            "Edward Mãos de Tesoura"
+        ]
     },
     {
-        "name": "Kung Fu Panda",
-        "emoji": "🐯🐍🐼🥋"
+        "id": "Kung Fu Panda",
+        "emoji": "🐯🐍🐼🥋",
+        "answers": [
+            "Kung Fu Panda"
+        ]
     },
     {
-        "name": "Up - Altas Aventuras",
-        "emoji": "🏠🎈👴🏻👦🏻"
+        "id": "up",
+        "emoji": "🏠🎈👴🏻👦🏻",
+        "answers": [
+            "Up",
+            "Up - Altas Aventuras"
+        ]
     },
     {
-        "name": "Está chovendo hambúrguer",
-        "emoji": "🌧🍔"
+        "id": "cloudy_meatballs",
+        "emoji": "🌧🍔",
+        "answers": [
+            "Cloudy with a Chance of Meatballs",
+            "Está Chovendo Hambúrguer",
+            "Tá Chovendo Hambúrguer"
+        ]
     },
     {
-        "name": "Ratatouille",
-        "emoji": "🍝🍲🍛🐭"
+        "id": "ratatouille",
+        "emoji": "🍝🍲🍛🐭",
+        "answers": [
+            "Ratatouille"
+        ]
     },
     {
-        "name": "A princesa e o sapo",
-        "emoji": "👸🏿🐸"
+        "id": "princess_frog",
+        "emoji": "👸🏿🐸",
+        "answers": [
+            "The Princess and the Frog",
+            "A Princesa e o Sapo"
+        ]
     },
     {
-        "name": "Alladin",
-        "emoji": "🧔🏽🐒🕌🧕🏼🐯"
+        "id": "Alladin",
+        "emoji": "🧔🏽🐒🕌🧕🏼🐯",
+        "answers": [
+            "Alladin"
+        ]
     },
     {
-        "name": "A branca de neve",
-        "emoji": "👸🏻🤓😠😁😴🤧☺😛"
+        "id": "snow_white",
+        "emoji": "👸🏻🤓😠😁😴🤧😊😛",
+        "answers": [
+            "Snow White and the Seven Dwarfs",
+            "Snow White",
+            "A Branca de Neve"
+        ]
     }
 ]

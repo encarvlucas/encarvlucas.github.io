@@ -1,6 +1,6 @@
 export interface GameState {
     lives: boolean[];
-    currentIndex: number;
+    history: string[];
     streak: boolean;
     points: number;
     highscore: number;

@@ -1,6 +1,6 @@
 @import "../../../custom-theme.scss";
 
-.container {
+.container, .container > * {
     display: grid;
     text-align: center;
 }
