@@ -12,6 +12,8 @@ import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { MatIconModule } from "@angular/material/icon";
 import { HttpClientModule } from "@angular/common/http";
 
+import { StringComparePipe } from "./pipes/string-compare.pipe";
+
 import { AppComponent } from "./components/app.component";
 import { SideMenuComponent } from "./components/side-menu/side-menu.component";
 import { HomeComponent } from "./components/home/home.component";
@@ -33,6 +35,7 @@ import { SchedulerComponent } from "./components/scheduler/scheduler.component";
         DarkModeComponent,
         GuessingComponent,
         SchedulerComponent,
+        StringComparePipe,
     ],
     imports: [
         BrowserModule,
@@ -48,6 +51,7 @@ import { SchedulerComponent } from "./components/scheduler/scheduler.component";
     ],
     providers: [
         { provide: LocationStrategy, useClass: PathLocationStrategy },
+        StringComparePipe
     ],
     bootstrap: [AppComponent]
 })

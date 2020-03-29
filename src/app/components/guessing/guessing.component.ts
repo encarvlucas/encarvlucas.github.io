@@ -3,6 +3,7 @@ import movieData from "./movies.json";
 import { Guess } from "./guess.model";
 import { GameState } from "./game-state.model";
 import { MatSnackBar, MatSnackBarRef, SimpleSnackBar } from "@angular/material/snack-bar";
+import { StringComparePipe } from 'src/app/pipes/string-compare.pipe';
 
 @Component({
     selector: "app-guessing",
@@ -21,7 +22,8 @@ export class GuessingComponent implements OnInit {
     public movies: Guess[];
 
     constructor(
-        private snackBar: MatSnackBar
+        private snackBar: MatSnackBar,
+        private compare: StringComparePipe
     ) { }
 
     ngOnInit(): void {
@@ -43,7 +45,7 @@ export class GuessingComponent implements OnInit {
     }
 
     public submit(attempt: string, guess: Guess): void {
-        if (attempt === guess.name) {
+        if (this.compare.transform(attempt, guess.name)) {
             this.points++;
             this.nextGuess();
         } else {
