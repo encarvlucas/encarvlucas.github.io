@@ -1,0 +1,226 @@
+@import "../../../custom-theme.scss";
+
+$navbar-size: 5rem;
+$transition-speed: 300ms;
+
+.content-box {
+    margin-left: $navbar-size;
+    height: 100%;
+    overflow-y: auto;
+
+    .content {
+        height: inherit;
+        padding: 1rem;
+    }
+}
+
+.navbar {
+    position: fixed;
+    background-color: $background-alt;
+    z-index: 10;
+    transition: width $transition-speed ease-in-out;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.nav-item {
+    width: 100%;
+    cursor: pointer;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: $navbar-size;
+    color: $primary;
+    filter: grayscale(100%) opacity(0.6);
+    transition: $transition-speed;
+
+    svg {
+        min-width: 2rem;
+        max-width: calc(#{$navbar-size} - 3rem);
+        max-height: calc(#{$navbar-size} - 3rem);
+        margin: 0 1.5rem;
+    }
+
+    span {
+        margin-right: 0;
+        color: $primary;
+        opacity: 0;
+        font-weight: 500;
+        font-size: 0;
+    }
+
+    &:hover {
+        filter: grayscale(0%) opacity(1) brightness(125%);
+        background-color: $background;
+    }
+}
+
+.logo-section {
+    width: 100%;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    background-color: darken($background, 5);
+
+    .nav-link {
+        filter: opacity(1);
+    }
+
+    svg {
+        color: $accent;
+        transform: rotateY(0deg);
+    }
+
+    .logo svg {
+        color: $warn;
+        opacity: 0;
+    }
+
+    h1 {
+        margin: 0 1.5rem;
+        color: $font;
+        display: none;
+        font-weight: 600;
+    }
+}
+
+@keyframes type {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+}
+
+/* Larger screens */
+@media only screen and (min-width: 600px) {
+    .navbar {
+        top: 0;
+        max-width: $navbar-size;
+        height: 100vh;
+
+        .navbar-nav {
+            overflow-x: hidden;
+        }
+
+        &:hover {
+            max-width: $navbar-size * 4;
+            width: auto;
+            transition: all $transition-speed ease-in;
+
+            .navbar-nav {
+                overflow-y: auto;
+            }
+
+            .logo-section {
+                .nav-link {
+                    background-color: initial;
+                }
+
+                .show-more svg {
+                    opacity: 0;
+                    display: none;
+                    transition: all $transition-speed ease-in;
+                }
+
+                .logo svg {
+                    transform: rotateY(180deg);
+                    opacity: 1;
+                    transition: all $transition-speed * 2 ease-in;
+                }
+
+                h1 {
+                    display: block;
+                    opacity: 1;
+                    transition: all $transition-speed ease-in;
+                    animation: type ($transition-speed * 1.5) steps(60, end);
+                }
+            }
+
+            .nav-title {
+                font-size: 1.2rem;
+                margin-right: 1.5rem;
+                opacity: 1;
+                transition: all $transition-speed ease-in;
+            }
+        }
+    }
+
+    .nav-item:last-child {
+        margin-top: auto;
+    }
+
+    .side-bar-tooltip {
+        display: none;
+    }
+}
+
+/* Smaller screens */
+@media only screen and (max-width: 600px) {
+    .content-box {
+        margin-left: 0;
+        height: calc(100vh - #{$navbar-size});
+    }
+
+    .logo-section {
+        display: none;
+    }
+
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: $navbar-size;
+        overflow-x: auto;
+    }
+
+    .navbar-nav {
+        overflow-x: auto;
+        overflow-y: hidden;
+        flex-direction: row;
+    }
+
+    .nav-item {
+        height: 100%;
+    }
+
+    .nav-link {
+        height: 100%;
+        justify-content: center;
+
+        .nav-title {
+            display: none;
+        }
+    }
+}
+
+mat-icon {
+    height: auto !important;
+    width: auto !important;
+}
+
+svg {
+    color: $primary;
+}
+
+.snack-bar{
+    white-space: pre-wrap;
+
+    button {
+       color: $primary;
+    }
+
+    &.warn button {
+        color: $warn;
+    }
+}

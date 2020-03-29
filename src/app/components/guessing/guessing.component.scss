@@ -1,0 +1,15 @@
+@import "../../../custom-theme.scss";
+
+.container {
+    display: grid;
+    text-align: center;
+}
+
+.label {
+    color: $primary;
+}
+
+::placeholder {
+    color: $font;
+    opacity: 0.85;
+}
