@@ -1,9 +1,11 @@
 <h1>Test</h1>
 <h2>This is {{ !dev ? "Projects" : "In Development" }} </h2>
-<app-card class="card" height="400" width="300"
-    *ngFor="let project of projects"
-    [title]="project.name"
-    [description]="project.description"
-    [route]="project.route"
-    [creationDate]="project.lastUpdated">
-</app-card>
+<div class="grid">
+    <app-card class="card"
+        *ngFor="let project of projects"
+        [title]="project.name"
+        [description]="project.description"
+        [route]="project.route"
+        [creationDate]="project.lastUpdated">
+    </app-card>
+</div>

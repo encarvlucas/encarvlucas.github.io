@@ -36,8 +36,8 @@ getting everyone's best availabe date?\nTry my group scheduler!`,
                     lastUpdated: new Date("2018-12-04T21:05:12"),
                 },
                 {
-                    name: "Project C",
-                    description: "Another project attempt",
+                    name: "Coming soon...",
+                    description: "While the ideas are hot...", // RegExpr
                     imageLink: "/pathToImage",
                 },
             ];
