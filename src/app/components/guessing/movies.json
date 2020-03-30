@@ -9,7 +9,7 @@
     },
     {
         "id": "life_of_pi",
-        "emoji": "⛵🐯",
+        "emoji": "🧑🏾⛵🐯",
         "answers": [
             "Life of Pi",
             "As Aventuras de Pi"
@@ -33,7 +33,7 @@
     },
     {
         "id": "Kung Fu Panda",
-        "emoji": "🐯🐍🐼🥋",
+        "emoji": "🐼🐯🐍🥋",
         "answers": [
             "Kung Fu Panda"
         ]
@@ -84,6 +84,14 @@
             "Snow White and the Seven Dwarfs",
             "Snow White",
             "A Branca de Neve"
+        ]
+    },
+    {
+        "id": "little_mermaid",
+        "emoji": "🧜🏼‍♀👩🏻‍🦰🤴🏻🦀🐟",
+        "answers": [
+            "The Little Mermaid",
+            "A Pequena Sereia"
         ]
     }
 ]
