@@ -1,8 +1,13 @@
 @import "../../../custom-theme.scss";
 
-.container, .container > * {
+.container div {
     display: grid;
     text-align: center;
+
+    .emoji {
+        font-size: 5rem;
+        line-height: initial;
+    }
 }
 
 .label {

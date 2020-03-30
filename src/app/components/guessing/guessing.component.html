@@ -1,22 +1,27 @@
 <div class="container">
     <div *ngIf="guess; else endGame">
         <h1>Adivinhe o filme!</h1>
-        <h2>{{ guess.emoji }}</h2>
+        <h2 class="emoji">{{ guess.emoji }}</h2>
         <h4>{{ points + " pontos" }}</h4>
-        <h4>{{ "recorde: " + highscore }}</h4>
+        <h4>{{ "Seguidas: " + highscore }}</h4>
         <mat-form-field>
-            <mat-label class="label">This is just a test</mat-label>
-            <input matInput placeholder="none" type="text"
+            <mat-label class="label">Qual o nome deste filme?</mat-label>
+            <input matInput placeholder="" type="text"
                 [(ngModel)]="answer"
                 (keydown.enter)="submit(answer, guess)">
         </mat-form-field>
         <button mat-raised-button (click)="submit(answer, guess)" color="primary">Confirmar</button>
-        <mat-icon *ngFor="let heart of lives" color="warn">favorite</mat-icon>
+        <button mat-raised-button (click)="skip()" color="accent">Pular</button>
+        <mat-icon *ngFor="let heart of livesArray" color="warn">favorite</mat-icon>
     </div>
 
     <ng-template #endGame>
-        <h1>Você respondeu a todos os filmes!</h1>
-        <h2>Quer tentar novamente?</h2>
-        <button mat-raised-button (click)="resetGame()" color="accent">Jogar do início</button>
+        <div>
+            <h1>Você respondeu a todos os filmes!</h1>
+            <h4>Pontuação: {{ points }} pontos</h4>
+            <h4>Recorde: {{ highscore }} seguidas</h4>
+            <h2>Quer tentar novamente?</h2>
+            <button mat-raised-button (click)="resetGame()" color="accent">Jogar do início</button>
+        </div>
     </ng-template>
 </div>
