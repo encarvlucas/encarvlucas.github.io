@@ -1,5 +1,4 @@
-<h1>Test</h1>
-<h2>This is {{ !dev ? "Projects" : "In Development" }} </h2>
+<h1>{{ !dev ? "These are my finished projects:" : "These are projects still in development:" }} </h1>
 <div class="grid">
     <app-card class="card"
         *ngFor="let project of projects"

@@ -1,12 +1,28 @@
 @import "../../../custom-theme.scss";
 
-.container div {
-    display: grid;
-    text-align: center;
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 
-    .emoji {
-        font-size: 5rem;
-        line-height: initial;
+    div {
+        text-align: center;
+        display: grid;
+
+        .emoji {
+            font-size: 5rem;
+            line-height: initial;
+        }
+    }
+
+    p {
+        margin-top: auto;
+        text-align: end;
+
+        a {
+            color: $primary;
+        }
     }
 }
 
