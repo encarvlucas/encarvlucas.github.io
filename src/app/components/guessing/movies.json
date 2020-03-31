@@ -128,5 +128,151 @@
             "Alice in Wonderland",
             "Alice no País das Maravilhas"
         ]
+    },
+    {
+        "id": "et",
+        "emoji":"🌙🚲👉🏼👈🏼👽",
+        "answers": [
+            "E.T.",
+            "ET"
+        ]
+    },
+    {
+        "id": "lodr",
+        "emoji":"👴🏻💍💍💍",
+        "answers": [
+            "The Lord of The Rings",
+            "O Senhor dos Anéis"
+        ]
+    },
+    {
+        "id": "oceans_11",
+        "emoji":"👨🏻👨🏻👨🏻👨🏻👨🏻👨🏻👨🏻👨🏻👨🏻👨🏻👨🏻🤫",
+        "answers": [
+            "Ocean's Eleven",
+            "Onze Homens e um Segredo"
+        ]
+    },
+    {
+        "id": "home_alone",
+        "emoji":"👩🏻‍🦰👨🏻✈️🏡👱🏻‍♂😱",
+        "answers": [
+            "Home Alone",
+            "Esqueceram de Mim"
+        ]
+    },
+    {
+        "id": "fast_furious",
+        "emoji":"🚗💨😡",
+        "answers": [
+            "The Fast and the Furious",
+            "Velozes e Furiosos"
+        ]
+    },
+    {
+        "id": "planet_apes",
+        "emoji":"🌎🐵🐒🙈🙉🙊",
+        "answers": [
+            "Planet of The Apes",
+            "Planeta dos Macacos"
+        ]
+    },
+    {
+        "id": "titanic",
+        "emoji":"🛳👩‍❤‍👨🏊🏻‍♀💔",
+        "answers": [
+            "Titanic"
+        ]
+    },
+    {
+        "id": "eat_pray_love",
+        "emoji":"🍝🙏🏼❤",
+        "answers": [
+            "Eat, Pray, Love",
+            "Comer, Rezar e Amar"
+        ]
+    },
+    {
+        "id": "hangover",
+        "emoji":"👨🏻🍻❌💍👩🏻",
+        "answers": [
+            "The Hangover",
+            "Se Beber Não Case",
+            "Se Beber, Não Case"
+        ]
+    },
+    {
+        "id": "devil_prada",
+        "emoji":"😈👗👠👜",
+        "answers": [
+            "The Devil Wears Prada",
+            "O Diado Veste Prada"
+        ]
+    },
+    {
+        "id": "chicken_run",
+        "emoji":"🏃🏻‍♂💨🐔🐔🐔🐔",
+        "answers": [
+            "Chicken Run",
+            "A Fuga das Galinhas"
+        ]
+    },
+    {
+        "id": "spiderman",
+        "emoji":"👨🏻🕷",
+        "answers": [
+            "Spider-Man",
+            "Homem-Aranha"
+        ]
+    },
+    {
+        "id": "mib",
+        "emoji":"👨🏼‍🦳🧑🏿🕶😎👽",
+        "answers": [
+            "Men In Black",
+            "MIB",
+            "Homens de Preto"
+        ]
+    },
+    {
+        "id": "night_museum",
+        "emoji":"🌙👮🏻‍♂🔦🐒🗿",
+        "answers": [
+            "Night at the Museum",
+            "Uma Noite no Museu"
+        ]
+    },
+    {
+        "id": "jurassic_park",
+        "emoji":"🦕🦖🎡🎢",
+        "answers": [
+            "Jurassic Park"
+        ]
+    },
+    {
+        "id": "bee_movie",
+        "emoji": "🐝📽️",
+        "answers": [
+            "Bee Movie",
+            "A História de uma Abelha"
+        ]
+    },
+    {
+        "id": "benjamin_button",
+        "emoji": "👴🏻➡️👨🏼➡️👱🏼‍♂️➡️👦🏼➡️👶🏼",
+        "answers": [
+            "The Curious Case of Benjamin Button",
+            "Benjamin Button",
+            "O Curioso Caso de Benjamin Button"
+        ]
+    },
+    {
+        "id": "cast_away",
+        "emoji": "✈️🌩️🏝️🧔🏼🏐",
+        "answers": [
+            "Cast Away",
+            "Wilson",
+            "O Náufrago"
+        ]
     }
 ]
