@@ -6,14 +6,31 @@
     display: flex;
     flex-direction: column;
 
-    div {
+    .tabs {
+        user-select: none;
+
+        h1 {
+            color: $font;
+            margin-bottom: 0;
+        }
+
+        .icon {
+            color: $primary;
+            margin-left: 0.5rem;
+        }
+    }
+
+    .game {
         text-align: center;
         display: grid;
 
-        .emoji {
-            font-size: 5rem;
-            line-height: initial;
-        }
+        grid-template-columns: 1rem 1fr 2fr 1fr 1rem;
+        grid-template-areas:
+            ".  .      title  .       ."
+            ".  guess  guess  guess   ."
+            ".  .      lives  points  ."
+            ".  .      input  buttons ."
+        ;
     }
 
     p {
@@ -24,6 +41,32 @@
             color: $primary;
         }
     }
+}
+
+.title {
+    grid-area: title;
+}
+
+.emoji {
+    font-size: 5rem;
+    line-height: initial;
+    grid-area: guess;
+}
+
+.points {
+    grid-area: points;
+}
+
+.input {
+    grid-area: input;
+}
+
+.buttons {
+    grid-area: buttons;
+}
+
+.lives {
+    grid-area: lives;
 }
 
 .label {

@@ -1,10 +1,11 @@
 import { Component, OnInit } from "@angular/core";
+// import {  } from "./../../custom-prototypes";
 import movieData from "./movies.json";
 import { Guess } from "../../models/guess.model";
 import { GameState } from "../../models/game-state.model";
+import { GuessTypes } from "src/app/models/guess-types.enum";
 import { MatSnackBar, MatSnackBarRef, SimpleSnackBar } from "@angular/material/snack-bar";
 import { StringComparePipe } from "src/app/pipes/string-compare.pipe";
-import {  } from "./../../custom-prototypes";
 
 @Component({
     selector: "app-guessing",
@@ -13,6 +14,38 @@ import {  } from "./../../custom-prototypes";
 })
 export class GuessingComponent implements OnInit {
 
+    public guessTypes = [
+        {
+            id: GuessTypes.Movies,
+            icon: "movie_filter",
+            title: "Filmes",
+            ready: true,
+        },
+        {
+            id: GuessTypes.Series,
+            icon: "tv",
+            title: "Séries",
+            ready: false,
+        },
+        {
+            id: GuessTypes.Games,
+            icon: "videogame_asset", // "casino" as alternative
+            title: "Jogos",
+            ready: false,
+        },
+        {
+            id: GuessTypes.Cities,
+            icon: "map", // "domain" as alternative
+            title: "Cidades",
+            ready: false,
+        },
+        {
+            id: GuessTypes.Bands,
+            icon: "theaters",
+            title: "Bandas",
+            ready: false,
+        },
+    ];
     private totalLives = 3;
     public lives: number;
     public guess: Guess;
@@ -30,11 +63,11 @@ export class GuessingComponent implements OnInit {
     ngOnInit(): void {
         // Initialize game state
         this.movies = movieData;
-        this.resetGame();
+        this.resetGame(false);
         this.loadState();
     }
 
-    private get remaining(): Guess[] {
+    public get remaining(): Guess[] {
         return this.movies.filter(guess => !this.history.includes(guess.id));
     }
 
@@ -73,16 +106,16 @@ export class GuessingComponent implements OnInit {
         this.nextGuess();
     }
 
-    private randomize(): number {
-        const maxNum = this.remaining.length;
-        return Math.floor(Math.random() * Math.floor(maxNum));
+    private randomize(options: Guess[]): Guess {
+        return options[Math.floor(Math.random() * Math.floor(options.length))];
     }
 
-    public nextGuess(): void {
+    public nextGuess(save: boolean = true): void {
         this.lives = this.totalLives;
         this.answer = "";
-        this.guess = this.remaining[this.randomize()];
-        if (this.guess) {
+        // Choose a new guess, besides the current/last
+        this.guess = this.randomize(this.remaining.filter(item => item.id !== this.guess?.id));
+        if (save) {
             this.saveState();
         }
     }
@@ -96,19 +129,19 @@ export class GuessingComponent implements OnInit {
         });
     }
 
-    public resetGame(): void {
+    public resetGame(save: boolean = true): void {
         this.history = [];
         this.points = 0;
         this.highscore = 0;
 
-        this.nextGuess();
+        this.nextGuess(save);
     }
 
     private saveState(): void {
         const gameState: GameState = {
             points: this.points,
             history: this.history,
-            guess: this.guess.id,
+            guess: this.guess?.id,
             highscore: this.highscore,
             lives: this.lives,
         };

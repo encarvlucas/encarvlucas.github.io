@@ -1,27 +1,50 @@
 <div class="container">
-    <div *ngIf="guess; else endGame">
-        <h1>Adivinhe o filme!</h1>
+    <mat-tab-group class="tabs" animationDuration="0ms">
+        <mat-tab *ngFor="let type of guessTypes" [disabled]="!type.ready">
+            <ng-template mat-tab-label>
+                <h1>{{ type.title }}</h1>
+                <mat-icon class="icon">{{ type.icon }}</mat-icon>
+              </ng-template>
+        </mat-tab>
+    </mat-tab-group>
+
+    <div *ngIf="guess; else endGame" class="game">
+        <h1 class="title">Adivinhe o filme!</h1>
         <h2 class="emoji">{{ guess.emoji }}</h2>
-        <h4>{{ points + " pontos" }}</h4>
-        <h4>{{ "Seguidas: " + highscore }}</h4>
-        <mat-form-field>
+        <div class="points">
+            <h4>{{ points + " pontos" }}</h4>
+            <h4>{{ "Seguidas: " + highscore }}</h4>
+        </div>
+        <mat-form-field class="input">
             <mat-label class="label">Qual o nome deste filme?</mat-label>
-            <input matInput placeholder="" type="text"
+            <input matInput placeholder="" type="text" class="input"
                 [(ngModel)]="answer"
                 (keydown.enter)="submit(answer, guess)">
         </mat-form-field>
-        <button mat-raised-button (click)="submit(answer, guess)" color="primary">Confirmar</button>
-        <button mat-raised-button (click)="skip()" color="accent">Pular</button>
-        <mat-icon *ngFor="let heart of livesArray" color="warn">favorite</mat-icon>
+        <div class="buttons">
+            <button mat-raised-button (click)="submit(answer, guess)" color="primary">
+                Confirmar
+            </button>
+            <button mat-raised-button (click)="skip()" [disabled]="remaining.length === 1" color="accent">
+                Pular
+            </button>
+        </div>
+        <div class="lives">
+            <mat-icon *ngFor="let heart of livesArray" color="warn">favorite</mat-icon>
+        </div>
     </div>
 
     <ng-template #endGame>
-        <div>
-            <h1>Você respondeu a todos os filmes!</h1>
-            <h4>Pontuação: {{ points }} pontos</h4>
-            <h4>Recorde: {{ highscore }} seguidas</h4>
-            <h2>Quer tentar novamente?</h2>
-            <button mat-raised-button (click)="resetGame()" color="accent">Jogar do início</button>
+        <div class="game">
+            <h1 class="title">Você respondeu a todos os filmes!</h1>
+            <div class="emoji">🎊🥳🎉</div>
+            <h1 class="points">Seu placar:</h1>
+            <div class="buttons">
+                <h4>Pontuação: {{ points }} pontos</h4>
+                <h4>Recorde: {{ highscore }} seguidas</h4>
+            </div>
+            <h2 class="lives">Quer tentar novamente?</h2>
+            <button mat-raised-button (click)="resetGame()" color="accent" class="input">Jogar do início</button>
         </div>
     </ng-template>
 
