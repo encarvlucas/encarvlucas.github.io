@@ -12,6 +12,10 @@
         h1 {
             color: $font;
             margin-bottom: 0;
+
+            &.disabled {
+                text-decoration: line-through #000000 2px;
+            }
         }
 
         .icon {
