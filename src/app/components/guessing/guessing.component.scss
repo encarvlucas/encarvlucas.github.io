@@ -1,4 +1,5 @@
 @import "../../../custom-theme.scss";
+$navbar-size: 5rem;
 
 .container{
     height: 100%;
@@ -80,4 +81,30 @@
 ::placeholder {
     color: $font;
     opacity: 0.85;
+}
+
+.animation {
+    $icon-width: 20vh;
+    position: absolute;
+    top: 9%;
+    // (middle of container) + (half of navbar width) - (half of icon width)
+    left: calc(50% + #{$navbar-size} / 2 - #{$icon-width} / 2);
+
+    .correct {
+        color: #4CAF50;
+    }
+
+    .icon {
+        height: $icon-width;
+        width: $icon-width;
+        font-size: $icon-width;
+
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
+    }
+
+    .showing {
+        opacity: 1;
+        transition: opacity 300ms ease-in-out;
+    }
 }

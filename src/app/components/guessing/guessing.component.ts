@@ -54,6 +54,10 @@ export class GuessingComponent implements OnInit {
     public points: number;
     public highscore: number;
     public movies: Guess[];
+    public animationTrigger = {
+        active: false,
+        correct: true
+    };
 
     constructor(
         private snackBar: MatSnackBar,
@@ -82,16 +86,18 @@ export class GuessingComponent implements OnInit {
 
     public submit(attempt: string, guess: Guess): void {
         if (this.compare.transform(attempt, guess)) {
+            this.triggerAnimation(true);
             this.points++;
             this.highscore++;
         } else {
+            this.alertUser("Resposta errada");
             this.lives--;
             if (this.lives === 0) {
                 this.highscore = 0;
                 this.alertUser(`Acabaram suas chances!\nA resposta era \"${guess.answers.last()}\"`,
                     5000, true);
             } else {
-                this.alertUser("Resposta errada");
+                this.triggerAnimation(false);
                 this.saveState();
                 return;
             }
@@ -157,5 +163,13 @@ export class GuessingComponent implements OnInit {
             this.highscore = previousData.highscore;
             this.lives = previousData.lives;
         }
+    }
+
+    private triggerAnimation(correct: boolean) {
+        this.animationTrigger.active = true;
+        this.animationTrigger.correct = correct;
+        setTimeout(() => {
+            this.animationTrigger.active = false;
+        }, 400);
     }
 }

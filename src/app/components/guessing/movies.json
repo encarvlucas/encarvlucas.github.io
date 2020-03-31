@@ -25,7 +25,7 @@
     },
     {
         "id": "edward_scissorhands",
-        "emoji": "✂🖐😩🖐✂",
+        "emoji": "😩✂🖐🖐✂",
         "answers": [
             "Edward Scissorhands",
             "Edward Mãos de Tesoura"
@@ -71,10 +71,13 @@
         ]
     },
     {
-        "id": "Alladin",
+        "id": "aladin",
         "emoji": "🧔🏽🐒🕌🧕🏼🐯",
         "answers": [
-            "Alladin"
+            "Alladin",
+            "Aladdin",
+            "Aladin",
+            "Aladim"
         ]
     },
     {
@@ -92,6 +95,38 @@
         "answers": [
             "The Little Mermaid",
             "A Pequena Sereia"
+        ]
+    },
+    {
+        "id": "sleepy_beauty",
+        "emoji":"👸🏼😴",
+        "answers": [
+            "Sleeping Beauty",
+            "A Bela Adormecida"
+        ]
+    },
+    {
+        "id": "bugs_life",
+        "emoji":"🐜🐜🐞🐛🦗",
+        "answers": [
+            "A Bug's Life",
+            "Vida de Inseto"
+        ]
+    },
+    {
+        "id": "inside_out",
+        "emoji":"💛😄💙😢❤😠💚😒💜😱",
+        "answers": [
+            "Inside Out",
+            "Divertidamente"
+        ]
+    },
+    {
+        "id": "alice_wonder",
+        "emoji":"👧🏼🐰🎩🐱👸🏻🧡",
+        "answers": [
+            "Alice in Wonderland",
+            "Alice no País das Maravilhas"
         ]
     }
 ]

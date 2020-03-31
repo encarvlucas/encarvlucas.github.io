@@ -50,3 +50,9 @@
 
     <p>Made using <a href="https://angular.io/">Angular</a>.</p>
 </div>
+
+<div class="animation">
+    <mat-icon [ngClass]="{ 'showing': animationTrigger.active, 'correct': animationTrigger.correct }" class="icon" color="warn">
+        {{ animationTrigger.correct ? "check_circle" : "close" }}
+    </mat-icon>
+</div>
