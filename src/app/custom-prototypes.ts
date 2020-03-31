@@ -7,6 +7,7 @@ declare global { // this is important to access it as global type String
     }
 
     interface Array<T> {
+        first(): T;
         last(): T;
     }
 }
@@ -16,8 +17,14 @@ if (!String.prototype.trimWhiteSpaces) {
     };
 }
 
-// if (!Array.prototype.last) {
+if (!Array.prototype.first) {
+    Array.prototype.first = function() {
+        return this[0];
+    };
+}
+
+if (!Array.prototype.last) {
     Array.prototype.last = function() {
         return this[this.length - 1];
     };
-// }
+}

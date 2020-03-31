@@ -1,7 +1,7 @@
 export interface GameState {
-    lives: boolean[];
+    lives: number;
     history: string[];
-    streak: boolean;
+    guess: string;
     points: number;
     highscore: number;
 }

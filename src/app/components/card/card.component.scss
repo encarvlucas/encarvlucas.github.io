@@ -1,8 +1,7 @@
 .container {
     border-radius: 5%;
-    background: url("https://i.pinimg.com/564x/6f/5a/b1/6f5ab1b470beeeeaf285bb451c63ac8f.jpg");
     background-color: black;
-    background-size: cover;
+    background-size: cover !important;
     cursor: pointer;
 
     -webkit-box-shadow: 0 0 5px #000;
@@ -30,7 +29,8 @@
 }
 
 .title {
-    font-size: 30px;
+    font-size: 21px;
+    font-weight: 600;
     line-height: 40px;
 
     transform: translateY(40px);
@@ -59,7 +59,7 @@
 }
 
 .desc {
-    font-size: 22px;
+    font-size: 18px;
     line-height: 24px;
     white-space: pre-wrap;
     font-weight: normal;

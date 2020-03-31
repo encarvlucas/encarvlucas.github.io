@@ -22,6 +22,7 @@ export class StringComparePipe implements PipeTransform {
             .normalize("NFD") // Split special characters in regular characters plus accents
             .replace(/[\u0300-\u036f]/g, "") // Remove accents
             .replace(/^the\s/, "") // Remove ambigous article "The "
+            .replace(/^[ao]s?\s/, "") // Remove ambigous article "[AO] " for pt-br
             .replace(/[\s\-\_]/g, "") // Remove whitespaces, hifens and underscores
             ;
     }

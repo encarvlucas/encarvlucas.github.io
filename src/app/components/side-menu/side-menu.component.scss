@@ -1,10 +1,12 @@
 @import "../../../custom-theme.scss";
 
-$navbar-size: 5rem;
+:root {
+    --navbar-size: 5rem; // Used regular css variable to be dynamic at runtime
+}
 $transition-speed: 300ms;
 
 .content-box {
-    margin-left: $navbar-size;
+    margin-left: var(--navbar-size);
     height: 100%;
     overflow-y: auto;
 
@@ -40,16 +42,18 @@ $transition-speed: 300ms;
 .nav-link {
     display: flex;
     align-items: center;
-    height: $navbar-size;
+    height: var(--navbar-size);
     color: $primary;
+    user-select: none;
     filter: grayscale(100%) opacity(0.6);
     transition: $transition-speed;
 
     svg {
-        min-width: 2rem;
-        max-width: calc(#{$navbar-size} - 3rem);
-        max-height: calc(#{$navbar-size} - 3rem);
-        margin: 0 1.5rem;
+        --margin-width: 1.5rem;
+        min-width: 1rem;
+        max-width: calc(var(--navbar-size) - var(--margin-width) * 2);
+        max-height: calc(var(--navbar-size) - var(--margin-width) * 2);
+        margin: 0 var(--margin-width);
     }
 
     span {
@@ -104,10 +108,10 @@ $transition-speed: 300ms;
 }
 
 /* Larger screens */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 601px) {
     .navbar {
         top: 0;
-        max-width: $navbar-size;
+        max-width: var(--navbar-size);
         height: 100vh;
 
         .navbar-nav {
@@ -115,7 +119,7 @@ $transition-speed: 300ms;
         }
 
         &:hover {
-            max-width: $navbar-size * 4;
+            max-width: calc(#{var(--navbar-size)} * 4);
             width: auto;
             transition: all $transition-speed ease-in;
 
@@ -170,7 +174,7 @@ $transition-speed: 300ms;
 @media only screen and (max-width: 600px) {
     .content-box {
         margin-left: 0;
-        height: calc(100vh - #{$navbar-size});
+        height: calc(100vh - #{var(--navbar-size)});
     }
 
     .logo-section {
@@ -180,7 +184,7 @@ $transition-speed: 300ms;
     .navbar {
         bottom: 0;
         width: 100vw;
-        height: $navbar-size;
+        height: var(--navbar-size);
         overflow-x: auto;
     }
 
@@ -200,6 +204,18 @@ $transition-speed: 300ms;
 
         .nav-title {
             display: none;
+        }
+    }
+}
+
+
+/* Even smaller screens */
+@media only screen and (max-width: 399px) {
+    :root {
+        --navbar-size: calc(100vw / 6);
+
+        .nav-link svg{
+            --margin-width: calc(100vw / 24);
         }
     }
 }
