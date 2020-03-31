@@ -20,6 +20,7 @@ const routes: Routes = [
     // Projects
     { path: "emoji", component: GuessingComponent },
     { path: "scheduler", component: SchedulerComponent },
+    { path: "search", component: ErrorComponent }, // RegEx project
 
     // Redirects
     { path: "", redirectTo: "home", pathMatch: "full" },

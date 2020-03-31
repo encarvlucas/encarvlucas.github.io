@@ -21,10 +21,10 @@ export class ProjectsComponent implements OnInit {
         if (this.dev) {
             this.projects = [
                 {
-                    name: "Emoji Guesser",
+                    name: "Emoji Guessing Game",
                     description: "Try to find out what pop culture meaning these emoji represent!",
                     route: "/emoji",
-                    imageLink: "/pathToImage",
+                    imageLink: "/assets/emoji-guess.jpg",
                     lastUpdated: new Date("2020-04-05T13:14:23"),
                 },
                 {
@@ -32,13 +32,14 @@ export class ProjectsComponent implements OnInit {
                     description: `Trying to arrange the best time and date for a group meeting but have trouble
 getting everyone's best availabe date?\nTry my group scheduler!`,
                     route: "/scheduler",
-                    imageLink: "/pathToImage",
+                    imageLink: "/assets/planner.webp",
                     lastUpdated: new Date("2018-12-04T21:05:12"),
                 },
                 {
                     name: "Coming soon...",
                     description: "While the ideas are hot...", // RegExpr
-                    imageLink: "/pathToImage",
+                    route: "/search",
+                    imageLink: "/assets/search.webp",
                 },
             ];
         }

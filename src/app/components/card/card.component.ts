@@ -10,7 +10,8 @@ export class CardComponent implements OnInit {
     @Input() public width?: number; // In pixels
     @Input() public title = "Title"; // Card title
     @Input() public description = "Description"; // Card description
-    @Input() public route = "/error"; // Card description
+    @Input() public img: string; // Card img url
+    @Input() public route = "/error"; // Card route
     @Input() public creationDate: Date; // Card date
 
     constructor() { }
@@ -20,7 +21,10 @@ export class CardComponent implements OnInit {
 
     public get style(): string {
         return `height: ${ this.height ? (this.height + "px") : "100%" };
-                width: ${ this.width ? (this.width + "px") : "100%" };`;
+                width: ${ this.width ? (this.width + "px") : "100%"};
+                background: url("${this.img}");
+                width: ${ this.width ? (this.width + "px") : "100%"};
+                `;
     }
 
 }

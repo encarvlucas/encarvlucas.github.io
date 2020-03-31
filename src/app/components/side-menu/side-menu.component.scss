@@ -44,6 +44,7 @@ $transition-speed: 300ms;
     align-items: center;
     height: var(--navbar-size);
     color: $primary;
+    user-select: none;
     filter: grayscale(100%) opacity(0.6);
     transition: $transition-speed;
 
