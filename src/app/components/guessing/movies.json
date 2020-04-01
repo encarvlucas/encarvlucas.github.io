@@ -2,6 +2,7 @@
     {
         "id": "lion_king",
         "emoji": "🦁👑",
+        "size": 2,
         "answers": [
             "Lion King",
             "Rei Leão"
@@ -10,6 +11,7 @@
     {
         "id": "life_of_pi",
         "emoji": "🧑🏾⛵🐯",
+        "size": 3,
         "answers": [
             "Life of Pi",
             "As Aventuras de Pi"
@@ -18,6 +20,7 @@
     {
         "id": "lady_tramp",
         "emoji": "🐕🍝🐩",
+        "size": 3,
         "answers": [
             "Lady and the Tramp",
             "A Dama e o Vagabundo"
@@ -25,7 +28,8 @@
     },
     {
         "id": "edward_scissorhands",
-        "emoji": "😩✂🖐🖐✂",
+        "emoji": "😩🖐✂",
+        "size": 3,
         "answers": [
             "Edward Scissorhands",
             "Edward Mãos de Tesoura"
@@ -34,6 +38,7 @@
     {
         "id": "kung_fu_panda",
         "emoji": "🐼🐯🐍🥋",
+        "size": 4,
         "answers": [
             "Kung Fu Panda"
         ]
@@ -41,6 +46,7 @@
     {
         "id": "up",
         "emoji": "🏠🎈👴🏻👦🏻",
+        "size": 4,
         "answers": [
             "Up",
             "Up - Altas Aventuras"
@@ -49,6 +55,7 @@
     {
         "id": "cloudy_meatballs",
         "emoji": "🌧🍔",
+        "size": 2,
         "answers": [
             "Cloudy with a Chance of Meatballs",
             "Está Chovendo Hambúrguer",
@@ -58,6 +65,7 @@
     {
         "id": "ratatouille",
         "emoji": "🍝🍲🍛🐭",
+        "size": 4,
         "answers": [
             "Ratatouille"
         ]
@@ -65,6 +73,7 @@
     {
         "id": "princess_frog",
         "emoji": "👸🏿🐸",
+        "size": 2,
         "answers": [
             "The Princess and the Frog",
             "A Princesa e o Sapo"
@@ -73,6 +82,7 @@
     {
         "id": "aladin",
         "emoji": "🧔🏽🐒🕌🧕🏼🐯",
+        "size": 5,
         "answers": [
             "Alladin",
             "Aladdin",
@@ -83,6 +93,7 @@
     {
         "id": "snow_white",
         "emoji": "👸🏻🤓😠😁😴🤧😊😛",
+        "size": 8,
         "answers": [
             "Snow White and the Seven Dwarfs",
             "Snow White",
@@ -92,6 +103,7 @@
     {
         "id": "little_mermaid",
         "emoji": "🧜🏼‍♀👩🏻‍🦰🤴🏻🦀🐟",
+        "size": 5,
         "answers": [
             "The Little Mermaid",
             "A Pequena Sereia"
@@ -99,7 +111,8 @@
     },
     {
         "id": "sleepy_beauty",
-        "emoji":"👸🏼😴",
+        "emoji": "👸🏼😴",
+        "size": 2,
         "answers": [
             "Sleeping Beauty",
             "A Bela Adormecida"
@@ -107,7 +120,8 @@
     },
     {
         "id": "bugs_life",
-        "emoji":"🐜🐜🐞🐛🦗",
+        "emoji": "🐜🐜🐞🐛🦗",
+        "size": 5,
         "answers": [
             "A Bug's Life",
             "Vida de Inseto"
@@ -115,7 +129,8 @@
     },
     {
         "id": "inside_out",
-        "emoji":"💛😄💙😢❤😠💚😒💜😱",
+        "emoji": "💛😄💙😢❤😠💚😒💜😱",
+        "size": 10,
         "answers": [
             "Inside Out",
             "Divertidamente"
@@ -123,7 +138,8 @@
     },
     {
         "id": "alice_wonder",
-        "emoji":"👧🏼🐰🎩🐱👸🏻🧡",
+        "emoji": "👧🏼🐰🎩🐱👸🏻🧡",
+        "size": 6,
         "answers": [
             "Alice in Wonderland",
             "Alice no País das Maravilhas"
@@ -131,7 +147,8 @@
     },
     {
         "id": "et",
-        "emoji":"🌙🚲👉🏼👈🏼👽",
+        "emoji": "🌙🚲👉🏼👈🏼👽",
+        "size": 5,
         "answers": [
             "E.T.",
             "ET"
@@ -139,7 +156,8 @@
     },
     {
         "id": "lodr",
-        "emoji":"👴🏻💍💍💍",
+        "emoji": "👴🏻💍💍💍",
+        "size": 4,
         "answers": [
             "The Lord of The Rings",
             "O Senhor dos Anéis"
@@ -147,7 +165,8 @@
     },
     {
         "id": "oceans_11",
-        "emoji":"👨🏻👨🏻👨🏻👨🏻👨🏻👨🏻👨🏻👨🏻👨🏻👨🏻👨🏻🤫",
+        "emoji": "👨🏻👨🏻👨🏻👨🏻👨🏻👨🏻👨🏻👨🏻👨🏻👨🏻👨🏻🤫",
+        "size": 12,
         "answers": [
             "Ocean's Eleven",
             "Onze Homens e um Segredo"
@@ -155,7 +174,8 @@
     },
     {
         "id": "home_alone",
-        "emoji":"👩🏻‍🦰👨🏻✈️🏡👱🏻‍♂😱",
+        "emoji": "👩🏻‍🦰👨🏻✈️🏡👱🏻‍♂😱",
+        "size": 6,
         "answers": [
             "Home Alone",
             "Esqueceram de Mim"
@@ -163,7 +183,8 @@
     },
     {
         "id": "fast_furious",
-        "emoji":"🚗💨😡",
+        "emoji": "🚗💨😡",
+        "size": 3,
         "answers": [
             "The Fast and the Furious",
             "Velozes e Furiosos"
@@ -171,7 +192,8 @@
     },
     {
         "id": "planet_apes",
-        "emoji":"🌎🐵🐒🙈🙉🙊",
+        "emoji": "🌎🐵🐒🙈🙉🙊",
+        "size": 6,
         "answers": [
             "Planet of The Apes",
             "Planeta dos Macacos"
@@ -179,14 +201,16 @@
     },
     {
         "id": "titanic",
-        "emoji":"🛳👩‍❤‍👨🏊🏻‍♀💔",
+        "emoji": "🛳👩‍❤‍👨🏊🏻‍♀💔",
+        "size": 4,
         "answers": [
             "Titanic"
         ]
     },
     {
         "id": "eat_pray_love",
-        "emoji":"🍝🙏🏼❤",
+        "emoji": "🍝🙏🏼🧡",
+        "size": 3,
         "answers": [
             "Eat, Pray, Love",
             "Comer, Rezar e Amar"
@@ -194,7 +218,8 @@
     },
     {
         "id": "hangover",
-        "emoji":"👨🏻🍻❌💍👩🏻",
+        "emoji": "👨🏻🍻❌💍👩🏻",
+        "size": 5,
         "answers": [
             "The Hangover",
             "Se Beber Não Case",
@@ -203,7 +228,8 @@
     },
     {
         "id": "devil_prada",
-        "emoji":"😈👗👠👜",
+        "emoji": "😈👗👠👜",
+        "size": 4,
         "answers": [
             "The Devil Wears Prada",
             "O Diado Veste Prada"
@@ -211,7 +237,8 @@
     },
     {
         "id": "chicken_run",
-        "emoji":"🏃🏻‍♂💨🐔🐔🐔🐔",
+        "emoji": "🏃🏻‍♂💨🐔🐔🐔🐔",
+        "size": 6,
         "answers": [
             "Chicken Run",
             "A Fuga das Galinhas"
@@ -219,7 +246,8 @@
     },
     {
         "id": "spiderman",
-        "emoji":"👨🏻🕷",
+        "emoji": "👨🏻🕷",
+        "size": 2,
         "answers": [
             "Spider-Man",
             "Homem-Aranha"
@@ -227,7 +255,8 @@
     },
     {
         "id": "mib",
-        "emoji":"👨🏼‍🦳🧑🏿🕶😎👽",
+        "emoji": "👨🏼‍🦳🧑🏿🕶😎👽",
+        "size": 5,
         "answers": [
             "Men In Black",
             "MIB",
@@ -236,7 +265,8 @@
     },
     {
         "id": "night_museum",
-        "emoji":"🌙👮🏻‍♂🔦🐒🗿",
+        "emoji": "🌙👮🏻‍♂🔦🐒🗿",
+        "size": 5,
         "answers": [
             "Night at the Museum",
             "Uma Noite no Museu"
@@ -244,7 +274,8 @@
     },
     {
         "id": "jurassic_park",
-        "emoji":"🦕🦖🎡🎢",
+        "emoji": "🦕🦖🎡🎢",
+        "size": 4,
         "answers": [
             "Jurassic Park"
         ]
@@ -252,6 +283,7 @@
     {
         "id": "bee_movie",
         "emoji": "🐝📽️",
+        "size": 2,
         "answers": [
             "Bee Movie",
             "A História de uma Abelha"
@@ -260,6 +292,7 @@
     {
         "id": "benjamin_button",
         "emoji": "👴🏻➡️👨🏼➡️👱🏼‍♂️➡️👦🏼➡️👶🏼",
+        "size": 9,
         "answers": [
             "The Curious Case of Benjamin Button",
             "Benjamin Button",
@@ -269,6 +302,7 @@
     {
         "id": "cast_away",
         "emoji": "✈️🌩️🏝️🧔🏼🏐",
+        "size": 5,
         "answers": [
             "Cast Away",
             "Wilson",
