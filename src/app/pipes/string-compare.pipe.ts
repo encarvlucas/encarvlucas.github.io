@@ -23,7 +23,7 @@ export class StringComparePipe implements PipeTransform {
             .replace(/[\u0300-\u036f]/g, "") // Remove accents
             .replace(/^the\s/, "") // Remove ambigous article "The "
             .replace(/^[ao]s?\s/, "") // Remove ambigous article "[AO] " for pt-br
-            .replace(/[\s\-\_]/g, "") // Remove whitespaces, hifens and underscores
+            .replace(/[\s\-\_\']/g, "") // Remove whitespaces, hifens, underscores and other special characters
             ;
     }
 }

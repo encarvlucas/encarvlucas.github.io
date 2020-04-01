@@ -2,7 +2,7 @@
     <mat-tab-group class="tabs" animationDuration="0ms">
         <mat-tab *ngFor="let type of guessTypes" [disabled]="!type.ready">
             <ng-template mat-tab-label>
-                <h1>{{ type.title }}</h1>
+                <h1 [ngClass]="{'disabled': !type.ready}">{{ type.title }}</h1>
                 <mat-icon class="icon">{{ type.icon }}</mat-icon>
               </ng-template>
         </mat-tab>
@@ -10,7 +10,9 @@
 
     <div *ngIf="guess; else endGame" class="game">
         <h1 class="title">Adivinhe o filme!</h1>
-        <h2 class="emoji">{{ guess.emoji }}</h2>
+        <h2 class="emoji" [ngClass]="{ 'long': guess.size > 5, 'very-long': guess.size > 9 }">
+            {{ guess.emoji }}
+        </h2>
         <div class="points">
             <h4>{{ points + " pontos" }}</h4>
             <h4>{{ "Seguidas: " + highscore }}</h4>
@@ -21,14 +23,12 @@
                 [(ngModel)]="answer"
                 (keydown.enter)="submit(answer, guess)">
         </mat-form-field>
-        <div class="buttons">
-            <button mat-raised-button (click)="submit(answer, guess)" color="primary">
-                Confirmar
-            </button>
-            <button mat-raised-button (click)="skip()" [disabled]="remaining.length === 1" color="accent">
-                Pular
-            </button>
-        </div>
+        <button mat-raised-button (click)="submit(answer, guess)" color="primary" class="buttons">
+            Confirmar
+        </button>
+        <button mat-raised-button (click)="skip()" [disabled]="remaining.length === 1" color="accent" class="score">
+            Pular
+        </button>
         <div class="lives">
             <mat-icon *ngFor="let heart of livesArray" color="warn">favorite</mat-icon>
         </div>
@@ -38,15 +38,21 @@
         <div class="game">
             <h1 class="title">Você respondeu a todos os filmes!</h1>
             <div class="emoji">🎊🥳🎉</div>
-            <h1 class="points">Seu placar:</h1>
-            <div class="buttons">
+            <h2 class="points">Seu placar:</h2>
+            <div class="score">
                 <h4>Pontuação: {{ points }} pontos</h4>
                 <h4>Recorde: {{ highscore }} seguidas</h4>
             </div>
             <h2 class="lives">Quer tentar novamente?</h2>
-            <button mat-raised-button (click)="resetGame()" color="accent" class="input">Jogar do início</button>
+            <button mat-raised-button (click)="resetGame()" color="accent" class="buttons">Jogar do início</button>
         </div>
     </ng-template>
 
     <p>Made using <a href="https://angular.io/">Angular</a>.</p>
+</div>
+
+<div class="animation">
+    <mat-icon color="warn" class="icon" [ngClass]="{ 'showing': animationTrigger.active, 'correct': animationTrigger.correct }">
+        {{ animationTrigger.correct ? "check_circle" : "close" }}
+    </mat-icon>
 </div>

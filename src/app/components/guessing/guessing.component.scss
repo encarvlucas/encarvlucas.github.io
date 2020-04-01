@@ -1,4 +1,5 @@
 @import "../../../custom-theme.scss";
+$navbar-size: 5rem;
 
 .container{
     height: 100%;
@@ -12,6 +13,10 @@
         h1 {
             color: $font;
             margin-bottom: 0;
+
+            &.disabled {
+                text-decoration: line-through #000000 2px;
+            }
         }
 
         .icon {
@@ -26,10 +31,10 @@
 
         grid-template-columns: 1rem 1fr 2fr 1fr 1rem;
         grid-template-areas:
-            ".  .      title  .       ."
+            ".  title  title  title   ."
             ".  guess  guess  guess   ."
-            ".  .      lives  points  ."
-            ".  .      input  buttons ."
+            ".  points input  input   ."
+            ".  score  lives  buttons ."
         ;
     }
 
@@ -44,13 +49,43 @@
 }
 
 .title {
+    margin: 1rem 0rem;
     grid-area: title;
 }
 
 .emoji {
-    font-size: 5rem;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+    --emoji-font-size: 5rem;
+    font-size: var(--emoji-font-size);
     line-height: initial;
     grid-area: guess;
+
+    /* Smaller screens */
+    @media only screen and (max-width: 1000px) {
+        &.long{
+            font-size: calc(var(--emoji-font-size) * 0.55);
+        }
+
+        &.very-long{
+            font-size: calc(var(--emoji-font-size) * 0.42);
+
+        }
+    }
+
+    /* Smaller screens */
+    @media only screen and (max-width: 600px) {
+        --emoji-font-size: 3rem;
+    }
+
+    /* Even smaller screens */
+    @media only screen and (max-width: 400px) {
+        --emoji-font-size: 2.6rem;
+    }
 }
 
 .points {
@@ -58,6 +93,7 @@
 }
 
 .input {
+    font-size: 1rem;
     grid-area: input;
 }
 
@@ -65,8 +101,18 @@
     grid-area: buttons;
 }
 
+.score {
+    grid-area: score;
+}
+
 .lives {
+    display: flex;
+    justify-content: center;
     grid-area: lives;
+
+    mat-icon {
+        align-self: center;
+    }
 }
 
 .label {
@@ -76,4 +122,35 @@
 ::placeholder {
     color: $font;
     opacity: 0.85;
+}
+
+.animation {
+    $icon-width: 20vh;
+    position: absolute;
+    top: 12%;
+    // (middle of container) + (half of navbar width) - (half of icon width)
+    left: calc(50% + #{$navbar-size} / 2 - #{$icon-width} / 2);
+
+    /* Smaller screens */
+    @media only screen and (max-width: 600px) {
+        left: calc(50% - #{$icon-width} / 2);
+    }
+
+    .correct {
+        color: #4CAF50;
+    }
+
+    .icon {
+        height: $icon-width;
+        width: $icon-width;
+        font-size: $icon-width;
+
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
+    }
+
+    .showing {
+        opacity: 1;
+        transition: opacity 300ms ease-in-out;
+    }
 }
