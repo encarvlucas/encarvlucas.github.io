@@ -1,5 +1,5 @@
 <div class="container">
-    <mat-tab-group class="tabs" animationDuration="0ms">
+    <mat-tab-group class="tabs" animationDuration="0ms" selectedIndex="0">
         <mat-tab *ngFor="let type of guessTypes" [disabled]="!type.ready">
             <ng-template mat-tab-label>
                 <h1 [ngClass]="{'disabled': !type.ready}">{{ type.title }}</h1>
@@ -48,7 +48,9 @@
         </div>
     </ng-template>
 
-    <p>Made using <a href="https://angular.io/">Angular</a>.</p>
+    <p class="credits">
+        Made using <a href="https://angular.io/">Angular</a>.
+    </p>
 </div>
 
 <div class="animation">

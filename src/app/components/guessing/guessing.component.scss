@@ -15,7 +15,7 @@ $navbar-size: 5rem;
             margin-bottom: 0;
 
             &.disabled {
-                text-decoration: line-through #000000 2px;
+                text-decoration: line-through #000000;
             }
         }
 
@@ -29,12 +29,12 @@ $navbar-size: 5rem;
         text-align: center;
         display: grid;
 
-        grid-template-columns: 1rem 1fr 2fr 1fr 1rem;
+        grid-template-columns: 1fr 0.5rem 2fr 0.5rem 1fr;
         grid-template-areas:
-            ".  title  title  title   ."
-            ".  guess  guess  guess   ."
-            ".  points input  input   ."
-            ".  score  lives  buttons ."
+            "title  title  title  title  title  "
+            "guess  guess  guess  guess  guess  "
+            "points .      input  input  input  "
+            "score  .      lives  .      buttons"
         ;
     }
 
@@ -98,6 +98,7 @@ $navbar-size: 5rem;
 }
 
 .buttons {
+    padding: 0;
     grid-area: buttons;
 }
 
@@ -117,6 +118,10 @@ $navbar-size: 5rem;
 
 .label {
     color: $primary;
+}
+
+.credits {
+    margin-bottom: 0.25rem;
 }
 
 ::placeholder {
