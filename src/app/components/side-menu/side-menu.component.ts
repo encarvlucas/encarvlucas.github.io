@@ -34,7 +34,7 @@ export class SideMenuComponent implements OnInit {
     },
     {
       title: 'MAIN.SETTINGS',
-      icon: 'moonIcon',
+      icon: 'gear',
       link: '/settings', // TODO: Dark mode functionality
     },
   ];
@@ -45,31 +45,35 @@ export class SideMenuComponent implements OnInit {
   ) {
     this.iconRegistry.addSvgIcon(
       'dragonIcon',
-      domSanitizer.bypassSecurityTrustResourceUrl('./assets/dragon-solid.svg')
+      domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/dragon-solid.svg')
     );
     this.iconRegistry.addSvgIcon(
       'showMoreIcon',
-      domSanitizer.bypassSecurityTrustResourceUrl('./assets/angle-double-right-solid.svg')
+      domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/angle-double-right-solid.svg')
     );
     this.iconRegistry.addSvgIcon(
       'houseIcon',
-      domSanitizer.bypassSecurityTrustResourceUrl('./assets/home-solid.svg')
+      domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/home-solid.svg')
     );
     this.iconRegistry.addSvgIcon(
       'rocketIcon',
-      domSanitizer.bypassSecurityTrustResourceUrl('./assets/rocket-solid.svg')
+      domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/rocket-solid.svg')
     );
     this.iconRegistry.addSvgIcon(
       'biohazardIcon',
-      domSanitizer.bypassSecurityTrustResourceUrl('./assets/biohazard-solid.svg')
+      domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/biohazard-solid.svg')
     );
     this.iconRegistry.addSvgIcon(
       'professionalIcon',
-      domSanitizer.bypassSecurityTrustResourceUrl('./assets/user-tie-solid.svg')
+      domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/user-tie-solid.svg')
     );
     this.iconRegistry.addSvgIcon(
       'moonIcon',
-      domSanitizer.bypassSecurityTrustResourceUrl('./assets/moon-solid.svg')
+      domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/moon-solid.svg')
+    );
+    this.iconRegistry.addSvgIcon(
+      'gear',
+      domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/cog-solid.svg')
     );
   }
 

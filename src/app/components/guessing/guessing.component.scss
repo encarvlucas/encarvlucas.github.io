@@ -1,161 +1,161 @@
 @import "../../../custom-theme.scss";
 $navbar-size: 5rem;
 
-.container{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 
-    .tabs {
-        user-select: none;
+  .tabs {
+    user-select: none;
 
-        h1 {
-            color: $font;
-            margin-bottom: 0;
+    h1 {
+      color: $font;
+      margin-bottom: 0;
 
-            &.disabled {
-                text-decoration: line-through #000000;
-            }
-        }
-
-        .icon {
-            color: $primary;
-            margin-left: 0.5rem;
-        }
-    }
-
-    .game {
-        text-align: center;
-        display: grid;
-
-        grid-template-columns: 1fr 0.5rem 2fr 0.5rem 1fr;
-        grid-template-areas:
-            "title  title  title  title  title  "
-            "guess  guess  guess  guess  guess  "
-            "points .      input  input  input  "
-            "score  .      lives  .      buttons"
-        ;
-    }
-
-    p {
-        margin-top: auto;
-        text-align: end;
-
-        a {
-            color: $primary;
-        }
-    }
-}
-
-.title {
-    margin: 1rem 0rem;
-    grid-area: title;
-}
-
-.emoji {
-    height: 15vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-
-    --emoji-font-size: 5rem;
-    font-size: var(--emoji-font-size);
-    line-height: initial;
-    grid-area: guess;
-
-    /* Smaller screens */
-    @media only screen and (max-width: 1000px) {
-        &.long{
-            font-size: calc(var(--emoji-font-size) * 0.55);
-        }
-
-        &.very-long{
-            font-size: calc(var(--emoji-font-size) * 0.42);
-
-        }
-    }
-
-    /* Smaller screens */
-    @media only screen and (max-width: 600px) {
-        --emoji-font-size: 3rem;
-    }
-
-    /* Even smaller screens */
-    @media only screen and (max-width: 400px) {
-        --emoji-font-size: 2.6rem;
-    }
-}
-
-.points {
-    grid-area: points;
-}
-
-.input {
-    font-size: 1rem;
-    grid-area: input;
-}
-
-.buttons {
-    padding: 0;
-    grid-area: buttons;
-}
-
-.score {
-    grid-area: score;
-}
-
-.lives {
-    display: flex;
-    justify-content: center;
-    grid-area: lives;
-
-    mat-icon {
-        align-self: center;
-    }
-}
-
-.label {
-    color: $primary;
-}
-
-.credits {
-    margin-bottom: 0.25rem;
-}
-
-::placeholder {
-    color: $font;
-    opacity: 0.85;
-}
-
-.animation {
-    $icon-width: 20vh;
-    position: absolute;
-    top: 12%;
-    // (middle of container) + (half of navbar width) - (half of icon width)
-    left: calc(50% + #{$navbar-size} / 2 - #{$icon-width} / 2);
-
-    /* Smaller screens */
-    @media only screen and (max-width: 600px) {
-        left: calc(50% - #{$icon-width} / 2);
-    }
-
-    .correct {
-        color: #4CAF50;
+      &.disabled {
+        text-decoration: line-through #000000;
+      }
     }
 
     .icon {
-        height: $icon-width;
-        width: $icon-width;
-        font-size: $icon-width;
+      color: $primary;
+      margin-left: 0.5rem;
+    }
+  }
 
-        opacity: 0;
-        transition: opacity 300ms ease-in-out;
+  .game {
+    text-align: center;
+    display: grid;
+
+    grid-template-columns: 1fr 0.5rem 2fr 0.5rem 1fr;
+    grid-template-areas:
+      "title  title  title  title  title  "
+      "guess  guess  guess  guess  guess  "
+      "points .      input  input  input  "
+      "score  .      lives  .      buttons"
+    ;
+  }
+
+  p {
+    margin-top: auto;
+    text-align: end;
+
+    a {
+      color: $primary;
+    }
+  }
+}
+
+.title {
+  margin: 1rem 0rem;
+  grid-area: title;
+}
+
+.emoji {
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+
+  --emoji-font-size: 5rem;
+  font-size: var(--emoji-font-size);
+  line-height: initial;
+  grid-area: guess;
+
+  /* Smaller screens */
+  @media only screen and (max-width: 1000px) {
+    &.long {
+      font-size: calc(var(--emoji-font-size) * 0.55);
     }
 
-    .showing {
-        opacity: 1;
-        transition: opacity 300ms ease-in-out;
+    &.very-long {
+      font-size: calc(var(--emoji-font-size) * 0.42);
+
     }
+  }
+
+  /* Smaller screens */
+  @media only screen and (max-width: 600px) {
+    --emoji-font-size: 3rem;
+  }
+
+  /* Even smaller screens */
+  @media only screen and (max-width: 400px) {
+    --emoji-font-size: 2.6rem;
+  }
+}
+
+.points {
+  grid-area: points;
+}
+
+.input {
+  font-size: 1rem;
+  grid-area: input;
+}
+
+.buttons {
+  padding: 0;
+  grid-area: buttons;
+}
+
+.score {
+  grid-area: score;
+}
+
+.lives {
+  display: flex;
+  justify-content: center;
+  grid-area: lives;
+
+  mat-icon {
+    align-self: center;
+  }
+}
+
+.label {
+  color: $primary;
+}
+
+.credits {
+  margin-bottom: 0.25rem;
+}
+
+::placeholder {
+  color: $font;
+  opacity: 0.85;
+}
+
+.animation {
+  $icon-width: 20vh;
+  position: absolute;
+  top: 12%;
+  // (middle of container) + (half of navbar width) - (half of icon width)
+  left: calc(50% + #{$navbar-size} / 2 - #{$icon-width} / 2);
+
+  /* Smaller screens */
+  @media only screen and (max-width: 600px) {
+    left: calc(50% - #{$icon-width} / 2);
+  }
+
+  .correct {
+    color: #4CAF50;
+  }
+
+  .icon {
+    height: $icon-width;
+    width: $icon-width;
+    font-size: $icon-width;
+
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+  }
+
+  .showing {
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
+  }
 }

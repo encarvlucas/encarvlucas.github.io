@@ -1,11 +1,12 @@
-<h1>{{ !dev ? "These are my finished projects:" : "These are projects still in development:" }} </h1>
+<h1 translate>{{ !dev ? "PROJECTS.DONE" : "PROJECTS.DEV" }} </h1>
 <div class="grid">
     <app-card class="card"
         *ngFor="let project of projects"
-        [title]="project.name"
-        [description]="project.description"
+        [title]="project.name | translate"
+        [description]="project.description | translate"
         [img]="project.imageLink"
         [route]="project.route"
+        [disabled]="project.disabled"
         [creationDate]="project.lastUpdated">
     </app-card>
 </div>

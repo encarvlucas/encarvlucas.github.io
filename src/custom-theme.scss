@@ -20,6 +20,7 @@ $encarvlucas-site-theme: mat-light-theme($encarvlucas-site-primary, $encarvlucas
 $primary: mat-color(map-get($encarvlucas-site-theme, primary));
 // $primary-lighter: mat-color(map-get($encarvlucas-site-theme, primary));
 $accent: mat-color(map-get($encarvlucas-site-theme, accent));
+$secondary: $accent;
 $warn: mat-color(map-get($encarvlucas-site-theme, warn));
 $background: #393E46;
 $background-alt: darken($background, 2);

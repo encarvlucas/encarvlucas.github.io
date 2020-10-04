@@ -21,25 +21,29 @@ export class ProjectsComponent implements OnInit {
     if (this.dev) {
       this.projects = [
         {
-          name: 'Emoji Guessing Game',
-          description: 'Try to find out what pop culture meaning these emoji represent!',
-          route: '/emoji',
-          imageLink: '/assets/emoji-guess.jpg',
-          lastUpdated: new Date('2020-04-05T13:14:23'),
-        },
-        {
-          name: 'Group Scheduler',
-          description: `Trying to arrange the best time and date for a group meeting but have trouble
-getting everyone's best availabe date?\nTry my group scheduler!`,
+          name: 'PROJECTS.PROJECT.SCHEDULER.TITLE',
+          description: 'PROJECTS.PROJECT.SCHEDULER.DESC',
           route: '/scheduler',
-          imageLink: '/assets/planner.webp',
+          imageLink: '/assets/images/planner.webp',
           lastUpdated: new Date('2018-12-04T21:05:12'),
+          disabled: true
         },
         {
-          name: 'Coming soon...',
-          description: 'While the ideas are hot...', // RegExpr
+          name: 'PROJECTS.PROJECT.UNTITLED.TITLE',
+          description: 'PROJECTS.PROJECT.UNTITLED.DESC', // RegExpr
           route: '/search',
-          imageLink: '/assets/search.webp',
+          imageLink: '/assets/images/search.webp',
+          disabled: true
+        },
+      ];
+    } else {
+      this.projects = [
+        {
+          name: 'PROJECTS.PROJECT.EMOJI.TITLE',
+          description: 'PROJECTS.PROJECT.EMOJI.DESC',
+          route: '/emoji',
+          imageLink: '/assets/images/emoji-guess.jpg',
+          lastUpdated: new Date('2020-04-03T17:38:00-03:00'),
         },
       ];
     }

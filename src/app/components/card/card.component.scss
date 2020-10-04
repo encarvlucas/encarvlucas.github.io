@@ -1,95 +1,106 @@
-.container {
-    border-radius: 5%;
-    background-color: black;
-    background-size: cover !important;
-    cursor: pointer;
+@import "./../../../styles.scss";
 
-    -webkit-box-shadow: 0 0 5px #000;
-    box-shadow: 0 0 5px #000;
+.container {
+  border-radius: 5%;
+  background-color: black;
+  background-size: cover !important;
+  cursor: pointer;
+
+  -webkit-box-shadow: 0 0 5px #000;
+  box-shadow: 0 0 5px #000;
+}
+
+.disabled {
+ cursor: not-allowed;
+ filter: grayscale(90);
 }
 
 .overlay {
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: inherit;
-    overflow-y: hidden;
-    overflow-wrap: break-word;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: inherit;
+  overflow-y: hidden;
+  overflow-wrap: break-word;
 
-    background: rgba(77, 77, 77, .9);
-    color: #000000;
-    opacity: 0;
-    transition: all 0.5s;
+  background: rgba(77, 77, 77, .9);
+  color: #000000;
+  opacity: 0;
+  transition: all 0.5s;
 }
 
 
 .items {
-    padding-left: 10%;
+  padding-left: 10%;
+  padding-right: 5%;
 }
 
 .title {
-    font-size: 21px;
-    font-weight: 600;
-    line-height: 40px;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 40px;
 
-    transform: translateY(40px);
-    transition: all 0.7s;
+  transform: translateY(40px);
+  transition: all 0.7s;
 
-    p {
-        margin: 0 !important;
-    }
+  p {
+    margin: 0 !important;
+  }
 
-    hr {
-        display: block;
-        width: 0;
-        margin: 0 0 20px;
+  hr {
+    display: block;
+    width: 0;
+    margin: 0 0 20px;
 
-        border: none;
-        border-bottom: solid 2px #000000;
+    border: none;
+    border-bottom: solid 2px #000000;
 
-        transition: all .5s;
-    }
+    transition: all .5s;
+  }
 }
 
 .date {
-    min-height: 20px;
-    text-align: right;
-    transition: all 0.4s;
+  color: $primary;
+  font-weight: 600;
+  font-style: italic;
+  min-height: 20px;
+  text-align: right;
+  transition: all 0.4s;
 }
 
 .desc {
-    font-size: 18px;
-    line-height: 24px;
-    white-space: pre-wrap;
-    font-weight: normal;
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.7s;
-    color: #B3B3B3;
+  font-size: 18px;
+  line-height: 24px;
+  white-space: pre-wrap;
+  font-weight: normal;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s;
+  color: darken($font, 10);
 }
 
 .container:hover .overlay {
+  opacity: 1;
+  overflow-y: auto;
+
+  & .title {
+    transform: translateY(0px);
+  }
+
+  & hr {
+    width: 75%;
+    transition-delay: 0.4s;
+  }
+
+  & .date {
+    transition: all 0.4s ease-in;
+    padding-right: 10%;
+  }
+
+  & .desc {
+    transform: translateY(0px);
+    transition-delay: 0.3s;
     opacity: 1;
-    overflow-y: auto;
-
-    & .title {
-        transform: translateY(0px);
-    }
-
-    & hr {
-        width: 75%;
-        transition-delay: 0.4s;
-    }
-
-    & .date {
-        transition: all 0.4s ease-in;
-        padding-right: 10%;
-    }
-
-    & .desc {
-        transform: translateY(0px);
-        transition-delay: 0.3s;
-        opacity: 1;
-    }
+  }
 }

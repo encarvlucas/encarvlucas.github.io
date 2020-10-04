@@ -4,9 +4,61 @@
     "PROJECTS": "Projects",
     "DEVELOPMENT": "In Development",
     "ABOUT": "About Me",
-    "SETTINGS": "Settings"
+    "SETTINGS": "Settings",
+    "MADE_WITH": "Made with "
+  },
+  "ERROR": {
+    "CONSTRUCTION_TITLE": "Page in construction",
+    "CONSTRUCTION_DESC": "Sorry, this page has not been created yet, please come back later and hopefully it will be done!",
+    "NOT_EXISTS_TITLE": "Page not found!",
+    "NOT_EXISTS_DESC": "Sorry, it seems the page you were looking for doesn't exist!"
+  },
+  "HOME": {
+    "WELCOME": "Welcome!",
+    "EXPLANATION": "Hello, this site is a place to create and apply interesting ideas I might have and help me practice new technologies I'm studying.",
+    "SEND_OFF": "Feel free to look around and checkout my projects!"
+  },
+  "PROJECTS": {
+    "DONE": "These are my finished projects:",
+    "DEV": "These are projects still in development:",
+    "PROJECT": {
+      "EMOJI": {
+        "TITLE": "Emoji Guessing Game",
+        "DESC": "Try to find out what pop culture meaning these emoji represent!",
+        "GUESS": "Guess the movie!",
+        "QUESTION": "What's the name of this movie?",
+        "SKIP": "Skip",
+        "SUBMIT": "Submit",
+        "POINTS": "{{points}} points",
+        "HIGHSCORE": "Highscore: {{highscore}}",
+        "OUT_OF_LIVES": "You are out of chances!\nThe answer was '{{answer}}'",
+        "WRONG": "Wrong answer!",
+        "WIN_TITLE": "You've finished the list!",
+        "FINAL_SCORE_TITLE": "Your score:",
+        "FINAL_SCORE_POINTS": "Score: {{points}} points",
+        "FINAL_SCORE_HIGHSCORE": "Streak: {{highscore}} in a row",
+        "TRY_AGAIN_QUESTION": "Want to try again?",
+        "PLAY_AGAIN": "Play from the start",
+        "GENRES": {
+          "MOVIES": "Movies",
+          "SERIES": "Series",
+          "GAMES": "Games",
+          "CITIES": "Cities",
+          "BANDS": "Bands"
+        }
+      },
+      "SCHEDULER": {
+        "TITLE": "Group Scheduler",
+        "DESC": "Trying to arrange the best time and date for a group meeting but have trouble getting everyone's best availabe date?\nTry my group scheduler!"
+      },
+      "UNTITLED": {
+        "TITLE": "Coming soon...",
+        "DESC": "While the ideas are hot..."
+      }
+    }
   },
   "LANG": {
+    "CHANGE": "Change the site's languague.",
     "EN-US": "English (US)",
     "PT-BR": "Portuguese (BR)"
   }

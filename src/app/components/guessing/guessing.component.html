@@ -1,60 +1,62 @@
 <div class="container">
-    <mat-tab-group class="tabs" animationDuration="0ms" selectedIndex="0">
-        <mat-tab *ngFor="let type of guessTypes" [disabled]="!type.ready">
-            <ng-template mat-tab-label>
-                <h1 [ngClass]="{'disabled': !type.ready}">{{ type.title }}</h1>
-                <mat-icon class="icon">{{ type.icon }}</mat-icon>
-              </ng-template>
-        </mat-tab>
-    </mat-tab-group>
+  <mat-tab-group class="tabs" animationDuration="0ms" selectedIndex="0">
+    <mat-tab *ngFor="let type of guessTypes" [disabled]="!type.ready">
+      <ng-template mat-tab-label>
+        <h1 [ngClass]="{'disabled': !type.ready}">{{ type.title }}</h1>
+        <mat-icon class="icon">{{ type.icon }}</mat-icon>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
 
-    <div *ngIf="guess; else endGame" class="game">
-        <h1 class="title">Adivinhe o filme!</h1>
-        <h2 class="emoji" [ngClass]="{ 'long': guess.size > 5, 'very-long': guess.size > 9 }">
-            {{ guess.emoji }}
-        </h2>
-        <div class="points">
-            <h4>{{ points + " pontos" }}</h4>
-            <h4>{{ "Seguidas: " + highscore }}</h4>
-        </div>
-        <mat-form-field class="input">
-            <mat-label class="label">Qual o nome deste filme?</mat-label>
-            <input matInput placeholder="" type="text" class="input"
-                [(ngModel)]="answer"
-                (keydown.enter)="submit(answer, guess)">
-        </mat-form-field>
-        <button mat-raised-button (click)="submit(answer, guess)" color="primary" class="buttons">
-            Confirmar
-        </button>
-        <button mat-raised-button (click)="skip()" [disabled]="remaining.length === 1" color="accent" class="score">
-            Pular
-        </button>
-        <div class="lives">
-            <mat-icon *ngFor="let heart of livesArray" color="warn">favorite</mat-icon>
-        </div>
+  <div *ngIf="guess; else endGame" class="game">
+    <h1 class="title" translate>PROJECTS.PROJECT.EMOJI.GUESS</h1>
+    <h2 class="emoji" [ngClass]="{ 'long': guess.size > 5, 'very-long': guess.size > 9 }">
+      {{ guess.emoji }}
+    </h2>
+    <div class="points">
+      <h4>{{ 'PROJECTS.PROJECT.EMOJI.POINTS' | translate:{ points: points } }}</h4>
+      <h4>{{ 'PROJECTS.PROJECT.EMOJI.HIGHSCORE' | translate:{ highscore: highscore } }}</h4>
     </div>
+    <mat-form-field class="input">
+      <mat-label class="label" translate>PROJECTS.PROJECT.EMOJI.QUESTION</mat-label>
+      <input matInput placeholder="" type="text" class="input" [(ngModel)]="answer"
+        (keydown.enter)="submit(answer, guess)">
+    </mat-form-field>
+    <button mat-raised-button (click)="submit(answer, guess)" color="primary" class="buttons">
+      {{ 'PROJECTS.PROJECT.EMOJI.SUBMIT' | translate }}
+    </button>
+    <button mat-raised-button (click)="skip()" [disabled]="remaining.length === 1" color="accent" class="score">
+      {{ 'PROJECTS.PROJECT.EMOJI.SKIP' | translate }}
+    </button>
+    <div class="lives">
+      <mat-icon *ngFor="let heart of livesArray" color="warn">favorite</mat-icon>
+    </div>
+  </div>
 
-    <ng-template #endGame>
-        <div class="game">
-            <h1 class="title">Você respondeu a todos os filmes!</h1>
-            <div class="emoji">🎊🥳🎉</div>
-            <h2 class="points">Seu placar:</h2>
-            <div class="score">
-                <h4>Pontuação: {{ points }} pontos</h4>
-                <h4>Recorde: {{ highscore }} seguidas</h4>
-            </div>
-            <h2 class="lives">Quer tentar novamente?</h2>
-            <button mat-raised-button (click)="resetGame()" color="accent" class="buttons">Jogar do início</button>
-        </div>
-    </ng-template>
+  <ng-template #endGame>
+    <div class="game">
+      <h1 class="title" translate>PROJECTS.PROJECT.EMOJI.WIN_TITLE</h1>
+      <div class="emoji">🎊🥳🎉</div>
+      <h2 class="points" translate>PROJECTS.PROJECT.EMOJI.FINAL_SCORE_TITLE</h2>
+      <div class="score">
+        <h4>{{ 'PROJECTS.PROJECT.EMOJI.FINAL_SCORE_POINTS' | translate:{ points: points } }}</h4>
+        <h4>{{ 'PROJECTS.PROJECT.EMOJI.FINAL_SCORE_HIGHSCORE' | translate:{ highscore: highscore } }}</h4>
+      </div>
+      <h2 class="lives" translate>PROJECTS.PROJECT.EMOJI.TRY_AGAIN_QUESTION</h2>
+      <button mat-raised-button (click)="resetGame()" color="accent" class="buttons">
+        {{ 'PROJECTS.PROJECT.EMOJI.PLAY_AGAIN' | translate }}
+      </button>
+    </div>
+  </ng-template>
 
-    <p class="credits">
-        Made using <a href="https://angular.io/">Angular</a>.
-    </p>
+  <p class="credits">
+    {{ 'MAIN.MADE_WITH' | translate }}<a href="https://angular.io/">Angular</a>.
+  </p>
 </div>
 
 <div class="animation">
-    <mat-icon color="warn" class="icon" [ngClass]="{ 'showing': animationTrigger.active, 'correct': animationTrigger.correct }">
-        {{ animationTrigger.correct ? "check_circle" : "close" }}
-    </mat-icon>
+  <mat-icon color="warn" class="icon"
+    [ngClass]="{ 'showing': animationTrigger.active, 'correct': animationTrigger.correct }">
+    {{ animationTrigger.correct ? "check_circle" : "close" }}
+  </mat-icon>
 </div>
