@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild, AfterViewInit } from "@angular/core";
 // import {  } from "./../../custom-prototypes";
 import movieData from "./movies.json";
 import { Guess } from "../../models/guess.model";
@@ -6,13 +6,16 @@ import { GameState } from "../../models/game-state.model";
 import { GuessTypes } from "src/app/models/guess-types.enum";
 import { MatSnackBar, MatSnackBarRef, SimpleSnackBar } from "@angular/material/snack-bar";
 import { StringComparePipe } from "src/app/pipes/string-compare.pipe";
+import { MatTabGroup } from "@angular/material/tabs";
 
 @Component({
     selector: "app-guessing",
     templateUrl: "./guessing.component.html",
     styleUrls: ["./guessing.component.scss"]
 })
-export class GuessingComponent implements OnInit {
+export class GuessingComponent implements OnInit, AfterViewInit {
+    @ViewChild(MatTabGroup)
+    matTabGroup: MatTabGroup;
 
     public guessTypes = [
         {
@@ -69,6 +72,13 @@ export class GuessingComponent implements OnInit {
         this.movies = movieData;
         this.resetGame(false);
         this.loadState();
+    }
+
+    ngAfterViewInit() {
+        // Fix selected tag width bug
+        setTimeout(() => {
+            this.matTabGroup.realignInkBar();
+        }, 100);
     }
 
     public get remaining(): Guess[] {
