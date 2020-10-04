@@ -27,6 +27,8 @@
         "DESC": "Tente adivinhar qual referência da cultura popular os emojis representam!",
         "GUESS": "Adivinhe o filme!",
         "QUESTION": "Qual o nome deste filme?",
+        "SKIP": "Pular",
+        "SUBMIT": "Confirmar",
         "POINTS": "{{points}} pontos",
         "HIGHSCORE": "Seguidas: {{highscore}}",
         "OUT_OF_LIVES": "Acabaram suas chances!\nA resposta era '{{answer}}'",

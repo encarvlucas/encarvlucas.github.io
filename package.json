@@ -8,6 +8,7 @@
     "deploy": "npm run build && firebase deploy --only hosting",
     "auth": "firebase login --reauth",
     "token": "firebase login:ci",
+    "transl": "node ./src/assets/i18n/check_translations.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
