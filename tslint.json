@@ -21,6 +21,7 @@
             "app",
             "kebab-case"
         ],
+        "indent": [true, "spaces", 2],
         "import-blacklist": [
             true,
             "rxjs/Rx"
@@ -69,7 +70,7 @@
         "ordered-imports": false,
         "quotemark": [
             true,
-            "double"
+            "single"
         ],
         "trailing-comma": false,
         "no-conflicting-lifecycle": true,

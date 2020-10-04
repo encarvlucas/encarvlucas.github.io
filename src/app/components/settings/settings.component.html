@@ -1,0 +1,14 @@
+<div>
+  <h1>{{ 'MAIN.SETTINGS' | translate }}</h1>
+
+  <div class="card">
+    <button mat-icon-button [matMenuTriggerFor]="langsMenu" aria-label="Example icon-button with a menu">
+      <mat-icon>language</mat-icon>
+    </button>
+    <mat-menu #langsMenu="matMenu" *ngFor="let lang of languages">
+      <button mat-menu-item (click)="changeLang(lang.code)">
+        <span>{{ lang.title | translate }}</span>
+      </button>
+    </mat-menu>
+  </div>
+</div>

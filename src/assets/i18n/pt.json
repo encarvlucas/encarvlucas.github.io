@@ -1,0 +1,13 @@
+{
+  "MAIN": {
+    "HOME": "Início",
+    "PROJECTS": "Projetos",
+    "DEVELOPMENT": "Em Desenvolvimento",
+    "ABOUT": "Sobre Mim",
+    "SETTINGS": "Configurações"
+  },
+  "LANG": {
+    "EN-US": "Inglês (US)",
+    "PT-BR": "Português (BR)"
+  }
+}

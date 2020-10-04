@@ -1,5 +1,5 @@
 export interface IconLink {
-    name: string;
-    icon: string;
-    route: string;
+  title: string;
+  icon: string;
+  link: string;
 }

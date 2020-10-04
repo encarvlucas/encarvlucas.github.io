@@ -1,17 +1,17 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from "@angular/core";
-// import {  } from "./../../custom-prototypes";
-import movieData from "./movies.json";
-import { Guess } from "../../models/guess.model";
-import { GameState } from "../../models/game-state.model";
-import { GuessTypes } from "src/app/models/guess-types.enum";
-import { MatSnackBar, MatSnackBarRef, SimpleSnackBar } from "@angular/material/snack-bar";
-import { StringComparePipe } from "src/app/pipes/string-compare.pipe";
-import { MatTabGroup } from "@angular/material/tabs";
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+// import {  } from './../../custom-prototypes';
+import movieData from './movies.json';
+import { Guess } from '../../models/guess.model';
+import { GameState } from '../../models/game-state.model';
+import { GuessTypes } from 'src/app/models/guess-types.enum';
+import { MatSnackBar, MatSnackBarRef, SimpleSnackBar } from '@angular/material/snack-bar';
+import { StringComparePipe } from 'src/app/pipes/string-compare.pipe';
+import { MatTabGroup } from '@angular/material/tabs';
 
 @Component({
-    selector: "app-guessing",
-    templateUrl: "./guessing.component.html",
-    styleUrls: ["./guessing.component.scss"]
+    selector: 'app-guessing',
+    templateUrl: './guessing.component.html',
+    styleUrls: ['./guessing.component.scss']
 })
 export class GuessingComponent implements OnInit, AfterViewInit {
     @ViewChild(MatTabGroup)
@@ -20,32 +20,32 @@ export class GuessingComponent implements OnInit, AfterViewInit {
     public guessTypes = [
         {
             id: GuessTypes.Movies,
-            icon: "movie_filter",
-            title: "Filmes",
+            icon: 'movie_filter',
+            title: 'Filmes',
             ready: true,
         },
         {
             id: GuessTypes.Series,
-            icon: "tv",
-            title: "Séries",
+            icon: 'tv',
+            title: 'Séries',
             ready: false,
         },
         {
             id: GuessTypes.Games,
-            icon: "videogame_asset", // "casino" as alternative
-            title: "Jogos",
+            icon: 'videogame_asset', // 'casino' as alternative
+            title: 'Jogos',
             ready: false,
         },
         {
             id: GuessTypes.Cities,
-            icon: "map", // "domain" as alternative
-            title: "Cidades",
+            icon: 'map', // 'domain' as alternative
+            title: 'Cidades',
             ready: false,
         },
         {
             id: GuessTypes.Bands,
-            icon: "theaters",
-            title: "Bandas",
+            icon: 'theaters',
+            title: 'Bandas',
             ready: false,
         },
     ];
@@ -100,11 +100,11 @@ export class GuessingComponent implements OnInit, AfterViewInit {
             this.points++;
             this.highscore++;
         } else {
-            this.alertUser("Resposta errada");
+            this.alertUser('Resposta errada');
             this.lives--;
             if (this.lives === 0) {
                 this.highscore = 0;
-                this.alertUser(`Acabaram suas chances!\nA resposta era \"${guess.answers.last()}\"`,
+                this.alertUser(`Acabaram suas chances!\nA resposta era \'${guess.answers.last()}\'`,
                     5000, true);
             } else {
                 this.triggerAnimation(false);
@@ -128,7 +128,7 @@ export class GuessingComponent implements OnInit, AfterViewInit {
 
     public nextGuess(save: boolean = true): void {
         this.lives = this.totalLives;
-        this.answer = "";
+        this.answer = '';
         // Choose a new guess, besides the current/last
         this.guess = this.randomize(this.remaining.filter(item => item.id !== this.guess?.id));
         if (save) {
@@ -137,11 +137,11 @@ export class GuessingComponent implements OnInit, AfterViewInit {
     }
 
     private alertUser(message: string, duration: number = 2000, top: boolean = false): MatSnackBarRef<SimpleSnackBar> {
-        return this.snackBar.open(message, "Ok", {
+        return this.snackBar.open(message, 'Ok', {
             duration,
-            verticalPosition: top ? "top" : "bottom",
-            horizontalPosition: "right",
-            panelClass: ["snack-bar", "warn"]
+            verticalPosition: top ? 'top' : 'bottom',
+            horizontalPosition: 'right',
+            panelClass: ['snack-bar', 'warn']
         });
     }
 
@@ -161,11 +161,11 @@ export class GuessingComponent implements OnInit, AfterViewInit {
             highscore: this.highscore,
             lives: this.lives,
         };
-        localStorage.setItem("gameState", JSON.stringify(gameState));
+        localStorage.setItem('gameState', JSON.stringify(gameState));
     }
 
     private loadState(): void {
-        const previousData: GameState = JSON.parse(localStorage.getItem("gameState"));
+        const previousData: GameState = JSON.parse(localStorage.getItem('gameState'));
         if (previousData) {
             this.points = previousData.points;
             this.history = previousData.history;
