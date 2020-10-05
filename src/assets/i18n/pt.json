@@ -1,0 +1,65 @@
+{
+  "MAIN": {
+    "HOME": "Início",
+    "PROJECTS": "Projetos",
+    "DEVELOPMENT": "Em Desenvolvimento",
+    "ABOUT": "Sobre Mim",
+    "SETTINGS": "Configurações",
+    "MADE_WITH": "Feito usando "
+  },
+  "ERROR": {
+    "CONSTRUCTION_TITLE": "Página em construção",
+    "CONSTRUCTION_DESC": "Desculpe, esta página não foi feita ainda, por favor volte depois e talvez ela já esteja pronta!",
+    "NOT_EXISTS_TITLE": "Página não encontrada!",
+    "NOT_EXISTS_DESC": "Desculpe, parece que a página está procurando não existe!"
+  },
+  "HOME": {
+    "WELCOME": "Bem vindo!",
+    "EXPLANATION": "Olá, este site é onde eu crio e aplico ideias interessantes que eu tenho e onde pratico novas tecnologias que estou estudando.",
+    "SEND_OFF": "Fique a vontade para explorar e ver meus projetos!"
+  },
+  "PROJECTS": {
+    "DONE": "Estes são meus projetos concluídos:",
+    "DEV": "Estes são meus projetos em desenvolvimento:",
+    "PROJECT": {
+      "EMOJI": {
+        "TITLE": "Jogo dos Emojis",
+        "DESC": "Tente adivinhar qual referência da cultura popular os emojis representam!",
+        "GUESS": "Adivinhe o filme!",
+        "QUESTION": "Qual o nome deste filme?",
+        "SKIP": "Pular",
+        "SUBMIT": "Confirmar",
+        "POINTS": "{{points}} pontos",
+        "HIGHSCORE": "Seguidas: {{highscore}}",
+        "OUT_OF_LIVES": "Acabaram suas chances!\nA resposta era '{{answer}}'",
+        "WRONG": "Resposta errada!",
+        "WIN_TITLE": "Você respondeu a todos os filmes!",
+        "FINAL_SCORE_TITLE": "Seu placar:",
+        "FINAL_SCORE_POINTS": "Pontuação: {{points}} pontos",
+        "FINAL_SCORE_HIGHSCORE": "Recorde: {{highscore}} seguidas",
+        "TRY_AGAIN_QUESTION": "Quer jogar novamente?",
+        "PLAY_AGAIN": "Jogar do início",
+        "GENRES": {
+          "MOVIES": "Filmes",
+          "SERIES": "Séries",
+          "GAMES": "Vídeo Games",
+          "CITIES": "Cidades",
+          "BANDS": "Bandas"
+        }
+      },
+      "SCHEDULER": {
+        "TITLE": "Organizador de calendários em grupo",
+        "DESC": "Já tentou organizar um evento com um grupo de pessoas mas teve dificuldade em combinar o melhor dia/horário? Tente meu organizador de grupos!"
+      },
+      "UNTITLED": {
+        "TITLE": "Vem mais por aí...",
+        "DESC": "Quando as ideias vierem..."
+      }
+    }
+  },
+  "LANG": {
+    "CHANGE": "Mude a língua do site.",
+    "EN-US": "Inglês (US)",
+    "PT-BR": "Português (BR)"
+  }
+}

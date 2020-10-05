@@ -13,7 +13,7 @@ declare global { // this is important to access it as global type String
 }
 if (!String.prototype.trimWhiteSpaces) {
     String.prototype.trimWhiteSpaces = function() {
-        return this.replace(/ +/g, "");
+        return this.replace(/ +/g, '');
     };
 }
 

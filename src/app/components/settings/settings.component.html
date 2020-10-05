@@ -1,0 +1,15 @@
+<div>
+  <h1>{{ 'MAIN.SETTINGS' | translate }}</h1>
+
+  <div class="card">
+    <button mat-icon-button [matMenuTriggerFor]="langsMenu" matTooltip="{{ 'LANG.CHANGE' | translate }}">
+      <mat-icon>language</mat-icon>
+      <span>{{ 'LANG.CHANGE' | translate }}</span>
+    </button>
+    <mat-menu #langsMenu="matMenu">
+      <button mat-menu-item (click)="changeLang(lang.code)" *ngFor="let lang of languages">
+        <span>{{ lang.title | translate }}</span>
+      </button>
+    </mat-menu>
+  </div>
+</div>

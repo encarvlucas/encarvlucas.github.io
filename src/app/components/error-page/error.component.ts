@@ -1,10 +1,10 @@
-import { Component, OnInit } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-    selector: "app-error",
-    templateUrl: "./error.component.html",
-    styleUrls: ["./error.component.scss"]
+    selector: 'app-error',
+    templateUrl: './error.component.html',
+    styleUrls: ['./error.component.scss']
 })
 export class ErrorComponent implements OnInit {
 
@@ -17,7 +17,7 @@ export class ErrorComponent implements OnInit {
     ngOnInit(): void {
         this.router.url.subscribe(
             resp => {
-                this.inConstruction = !resp.some(url => url.path === "error");
+                this.inConstruction = !resp.some(url => url.path === 'error');
             }
         );
     }
