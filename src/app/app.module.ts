@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -28,6 +29,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { GuessingComponent } from './components/guessing/guessing.component';
 import { SchedulerComponent } from './components/scheduler/scheduler.component';
+import { RandomWordsHelperComponent } from './components/random-words-helper/random-words-helper.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -46,6 +48,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     GuessingComponent,
     SchedulerComponent,
     StringComparePipe,
+    RandomWordsHelperComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,6 +58,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatButtonModule,
     MatInputModule,
     MatMenuModule,
+    MatProgressSpinnerModule,
     MatTabsModule,
     MatTooltipModule,
     MatSnackBarModule,

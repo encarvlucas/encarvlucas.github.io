@@ -9,24 +9,24 @@
   </mat-tab-group>
 
   <div *ngIf="guess; else endGame" class="game">
-    <h1 class="title" translate>PROJECTS.PROJECT.EMOJI.GUESS</h1>
+    <h1 class="title" translate>PROJECTS.EMOJI.GUESS</h1>
     <h2 class="emoji" [ngClass]="{ 'long': guess.size > 5, 'very-long': guess.size > 9 }">
       {{ guess.emoji }}
     </h2>
     <div class="points">
-      <h4>{{ 'PROJECTS.PROJECT.EMOJI.POINTS' | translate:{ points: points } }}</h4>
-      <h4>{{ 'PROJECTS.PROJECT.EMOJI.HIGHSCORE' | translate:{ highscore: highscore } }}</h4>
+      <h4>{{ 'PROJECTS.EMOJI.POINTS' | translate:{ points: points } }}</h4>
+      <h4>{{ 'PROJECTS.EMOJI.HIGHSCORE' | translate:{ highscore: highscore } }}</h4>
     </div>
     <mat-form-field class="input">
-      <mat-label class="label" translate>PROJECTS.PROJECT.EMOJI.QUESTION</mat-label>
+      <mat-label class="label" translate>PROJECTS.EMOJI.QUESTION</mat-label>
       <input matInput placeholder="" type="text" class="input" [(ngModel)]="answer"
         (keydown.enter)="submit(answer, guess)">
     </mat-form-field>
     <button mat-raised-button (click)="submit(answer, guess)" color="primary" class="buttons">
-      {{ 'PROJECTS.PROJECT.EMOJI.SUBMIT' | translate }}
+      {{ 'PROJECTS.EMOJI.SUBMIT' | translate }}
     </button>
     <button mat-raised-button (click)="skip()" [disabled]="remaining.length === 1" color="accent" class="score">
-      {{ 'PROJECTS.PROJECT.EMOJI.SKIP' | translate }}
+      {{ 'PROJECTS.EMOJI.SKIP' | translate }}
     </button>
     <div class="lives">
       <mat-icon *ngFor="let heart of livesArray" color="warn">favorite</mat-icon>
@@ -35,16 +35,16 @@
 
   <ng-template #endGame>
     <div class="game">
-      <h1 class="title" translate>PROJECTS.PROJECT.EMOJI.WIN_TITLE</h1>
+      <h1 class="title" translate>PROJECTS.EMOJI.WIN_TITLE</h1>
       <div class="emoji">🎊🥳🎉</div>
-      <h2 class="points" translate>PROJECTS.PROJECT.EMOJI.FINAL_SCORE_TITLE</h2>
+      <h2 class="points" translate>PROJECTS.EMOJI.FINAL_SCORE_TITLE</h2>
       <div class="score">
-        <h4>{{ 'PROJECTS.PROJECT.EMOJI.FINAL_SCORE_POINTS' | translate:{ points: points } }}</h4>
-        <h4>{{ 'PROJECTS.PROJECT.EMOJI.FINAL_SCORE_HIGHSCORE' | translate:{ highscore: highscore } }}</h4>
+        <h4>{{ 'PROJECTS.EMOJI.FINAL_SCORE_POINTS' | translate:{ points: points } }}</h4>
+        <h4>{{ 'PROJECTS.EMOJI.FINAL_SCORE_HIGHSCORE' | translate:{ highscore: highscore } }}</h4>
       </div>
-      <h2 class="lives" translate>PROJECTS.PROJECT.EMOJI.TRY_AGAIN_QUESTION</h2>
+      <h2 class="lives" translate>PROJECTS.EMOJI.TRY_AGAIN_QUESTION</h2>
       <button mat-raised-button (click)="resetGame()" color="accent" class="buttons">
-        {{ 'PROJECTS.PROJECT.EMOJI.PLAY_AGAIN' | translate }}
+        {{ 'PROJECTS.EMOJI.PLAY_AGAIN' | translate }}
       </button>
     </div>
   </ng-template>

@@ -21,16 +21,23 @@ export class ProjectsComponent implements OnInit {
     if (this.dev) {
       this.projects = [
         {
-          name: 'PROJECTS.PROJECT.SCHEDULER.TITLE',
-          description: 'PROJECTS.PROJECT.SCHEDULER.DESC',
+          name: 'PROJECTS.RANDOM_WORDS.TITLE',
+          description: 'PROJECTS.RANDOM_WORDS.DESC',
+          route: '/randomWords',
+          imageLink: '/assets/images/planner.webp',
+          lastUpdated: new Date('2020-10-05T21:05:12'),
+        },
+        {
+          name: 'PROJECTS.SCHEDULER.TITLE',
+          description: 'PROJECTS.SCHEDULER.DESC',
           route: '/scheduler',
           imageLink: '/assets/images/planner.webp',
-          lastUpdated: new Date('2018-12-04T21:05:12'),
+          lastUpdated: new Date('2021-12-04T21:05:12'),
           disabled: true
         },
         {
-          name: 'PROJECTS.PROJECT.UNTITLED.TITLE',
-          description: 'PROJECTS.PROJECT.UNTITLED.DESC', // RegExpr
+          name: 'PROJECTS.UNTITLED.TITLE',
+          description: 'PROJECTS.UNTITLED.DESC', // RegExpr
           route: '/search',
           imageLink: '/assets/images/search.webp',
           disabled: true
@@ -39,8 +46,8 @@ export class ProjectsComponent implements OnInit {
     } else {
       this.projects = [
         {
-          name: 'PROJECTS.PROJECT.EMOJI.TITLE',
-          description: 'PROJECTS.PROJECT.EMOJI.DESC',
+          name: 'PROJECTS.EMOJI.TITLE',
+          description: 'PROJECTS.EMOJI.DESC',
           route: '/emoji',
           imageLink: '/assets/images/emoji-guess.jpg',
           lastUpdated: new Date('2020-04-03T17:38:00-03:00'),

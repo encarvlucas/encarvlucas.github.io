@@ -21,40 +21,48 @@
   "PROJECTS": {
     "DONE": "Estes são meus projetos concluídos:",
     "DEV": "Estes são meus projetos em desenvolvimento:",
-    "PROJECT": {
-      "EMOJI": {
-        "TITLE": "Jogo dos Emojis",
-        "DESC": "Tente adivinhar qual referência da cultura popular os emojis representam!",
-        "GUESS": "Adivinhe o filme!",
-        "QUESTION": "Qual o nome deste filme?",
-        "SKIP": "Pular",
-        "SUBMIT": "Confirmar",
-        "POINTS": "{{points}} pontos",
-        "HIGHSCORE": "Seguidas: {{highscore}}",
-        "OUT_OF_LIVES": "Acabaram suas chances!\nA resposta era '{{answer}}'",
-        "WRONG": "Resposta errada!",
-        "WIN_TITLE": "Você respondeu a todos os filmes!",
-        "FINAL_SCORE_TITLE": "Seu placar:",
-        "FINAL_SCORE_POINTS": "Pontuação: {{points}} pontos",
-        "FINAL_SCORE_HIGHSCORE": "Recorde: {{highscore}} seguidas",
-        "TRY_AGAIN_QUESTION": "Quer jogar novamente?",
-        "PLAY_AGAIN": "Jogar do início",
-        "GENRES": {
-          "MOVIES": "Filmes",
-          "SERIES": "Séries",
-          "GAMES": "Vídeo Games",
-          "CITIES": "Cidades",
-          "BANDS": "Bandas"
-        }
-      },
-      "SCHEDULER": {
-        "TITLE": "Organizador de calendários em grupo",
-        "DESC": "Já tentou organizar um evento com um grupo de pessoas mas teve dificuldade em combinar o melhor dia/horário? Tente meu organizador de grupos!"
-      },
-      "UNTITLED": {
-        "TITLE": "Vem mais por aí...",
-        "DESC": "Quando as ideias vierem..."
+    "EMOJI": {
+      "TITLE": "Jogo dos Emojis",
+      "DESC": "Tente adivinhar qual referência da cultura popular os emojis representam!",
+      "GUESS": "Adivinhe o filme!",
+      "QUESTION": "Qual o nome deste filme?",
+      "SKIP": "Pular",
+      "SUBMIT": "Confirmar",
+      "POINTS": "{{points}} pontos",
+      "HIGHSCORE": "Seguidas: {{highscore}}",
+      "OUT_OF_LIVES": "Acabaram suas chances!\nA resposta era '{{answer}}'",
+      "WRONG": "Resposta errada!",
+      "WIN_TITLE": "Você respondeu a todos os filmes!",
+      "FINAL_SCORE_TITLE": "Seu placar:",
+      "FINAL_SCORE_POINTS": "Pontuação: {{points}} pontos",
+      "FINAL_SCORE_HIGHSCORE": "Recorde: {{highscore}} seguidas",
+      "TRY_AGAIN_QUESTION": "Quer jogar novamente?",
+      "PLAY_AGAIN": "Jogar do início",
+      "GENRES": {
+        "MOVIES": "Filmes",
+        "SERIES": "Séries",
+        "GAMES": "Vídeo Games",
+        "CITIES": "Cidades",
+        "BANDS": "Bandas"
       }
+    },
+    "RANDOM_WORDS": {
+      "TITLE": "Palavras Aleatórias",
+      "DESC": "Eu e alguns amigos queríamos achar palavras aleatórias para usarmos como pedidos de desenho no jogo \"Drawful 2\", então eu fiz esse site.",
+      "GENERATED_LIST_TITLE": "Aqui estão algumas palavras aleatórias para começar (somente em inglês):",
+      "SUBMIT": "Enviar",
+      "REROLL": "Outras",
+      "ARTICLE": "Use esse artigo da Wikipedia como inspiração!",
+      "NEW_ARTICLE": "Novo Artigo",
+      "DISCOVER": "Leia mais sobre esse artigo."
+    },
+    "SCHEDULER": {
+      "TITLE": "Organizador de calendários em grupo",
+      "DESC": "Já tentou organizar um evento com um grupo de pessoas mas teve dificuldade em combinar o melhor dia/horário? Tente meu organizador de grupos!"
+    },
+    "UNTITLED": {
+      "TITLE": "Vem mais por aí...",
+      "DESC": "Quando as ideias vierem..."
     }
   },
   "LANG": {

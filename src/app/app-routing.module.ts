@@ -6,6 +6,7 @@ import { ErrorComponent } from './components/error-page/error.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { GuessingComponent } from './components/guessing/guessing.component';
 import { SchedulerComponent } from './components/scheduler/scheduler.component';
+import { RandomWordsHelperComponent } from './components/random-words-helper/random-words-helper.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
 
     // Projects
     { path: 'emoji', component: GuessingComponent },
+    { path: 'randomWords', component: RandomWordsHelperComponent },
     { path: 'scheduler', component: SchedulerComponent },
     { path: 'search', component: ErrorComponent }, // RegEx project
 
