@@ -19,10 +19,16 @@ jobs:
 
             - name: Install dependencies
               run: npm ci
+              
+            - name: Check translation files
+              run: npm run transl
+              
             - name: Lint app
               run: npm run lint
+              
             - name: Build app
               run: npm run build
+              
             # Add tests
             #- name: Build app
             #  run: npm test
