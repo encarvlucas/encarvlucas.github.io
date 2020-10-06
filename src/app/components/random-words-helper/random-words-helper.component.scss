@@ -1,0 +1,75 @@
+@import "./../../../custom-theme.scss";
+
+.content {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 1fr 5fr 1fr 5fr 1fr;
+
+  > * {
+    padding: 0.5rem;
+    display: flex;
+    border: $primary solid;
+    border-radius: 2%;
+  }
+
+  .left {
+    flex-direction: column;
+    grid-column: span 2 / auto;
+    grid-row: 1;
+
+    button {
+      width: 30%;
+      min-width: 6rem;
+      align-self: center;
+    }
+  }
+
+  .right {
+    flex-direction: column;
+    grid-column: 4 / span 2;
+    grid-row: 1;
+
+    .article {
+      margin-bottom: 1rem;
+
+      h2 {
+        font-style: italic;
+      }
+    }
+
+    button {
+      width: 30%;
+      min-width: 8rem;
+      align-self: center;
+    }
+  }
+
+  .center {
+    justify-content: center;
+    grid-column: 2 / span 3;
+
+    button {
+      cursor: not-allowed;
+    }
+  }
+
+  .words-list {
+    margin-bottom: 1rem;
+    display: grid;
+    gap: 0.3rem;
+    grid-template-columns: repeat(auto-fill, 6rem);
+    justify-content: center;
+
+    .pill {
+      text-align: center;
+      background-color: $primary;
+      border-radius: 0.5rem;
+      color: black;
+    }
+  }
+}
+
+mat-spinner {
+  margin: 1rem;
+  left: calc(50% - 60px);
+}

@@ -1,0 +1,35 @@
+<h1 translate>PROJECTS.RANDOM_WORDS.TITLE</h1>
+<div class="content">
+  <div class="left">
+    <h1 translate>PROJECTS.RANDOM_WORDS.GENERATED_LIST_TITLE</h1>
+    <mat-spinner *ngIf="isLoadingWords" color="primary" diameter="100"></mat-spinner>
+    <div class="words-list" *ngIf="!isLoadingWords">
+      <div *ngFor="let word of randomWords" class="pill">
+        <span>{{ word }}</span>
+      </div>
+    </div>
+    <button mat-raised-button color="accent" (click)="rerollWords()">
+      <mat-icon>autorenew</mat-icon>
+      {{ 'PROJECTS.RANDOM_WORDS.REROLL' | translate }}
+    </button>
+  </div>
+
+  <div class="center">
+    <button mat-raised-button color="primary" disabled>{{ 'PROJECTS.RANDOM_WORDS.SUBMIT' | translate }}</button>
+  </div>
+
+  <div class="right">
+    <h1 translate>PROJECTS.RANDOM_WORDS.ARTICLE</h1>
+    <mat-spinner *ngIf="isLoadingArticle" color="primary" diameter="100"></mat-spinner>
+    <div class="article" *ngIf="!isLoadingArticle">
+      <h2>{{ randomArticle?.title }}</h2><br>
+      <img [src]="randomArticle?.thumbnail?.source"><br>
+      <span>{{ randomArticle?.extract }}</span><br>
+      <a [href]="randomArticle?.content_urls?.desktop.page">{{ 'PROJECTS.RANDOM_WORDS.DISCOVER' | translate }}</a>
+    </div>
+    <button mat-raised-button color="accent" (click)="rerollArticle()">
+      <mat-icon>autorenew</mat-icon>
+      {{ 'PROJECTS.RANDOM_WORDS.NEW_ARTICLE' | translate }}
+    </button>
+  </div>
+</div>

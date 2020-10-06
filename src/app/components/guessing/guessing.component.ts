@@ -10,7 +10,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { SettingsService } from '../../settings.service';
 import { Subscription } from 'rxjs';
 
-const baseTranslate = 'PROJECTS.PROJECT.EMOJI.';
+const baseTranslate = 'PROJECTS.EMOJI.';
 
 @Component({
   selector: 'app-guessing',
